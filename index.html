@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ජපාන කෘෂිකාර්මික විභාගය - ප්‍රශ්න 100 ස්වයං ඇගයීම් පරීක්ෂණය</title>
+    <title>ජපාන කෘෂිකාර්මික විභාගය - ප්‍රශ්න 96 ස්වයං ඇගයීම් පරීක්ෂණය</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -32,59 +32,51 @@
             background-color: #e8f5e9;
             padding: 12px;
             border-radius: 8px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             font-size: 14px;
-            font-weight: bold;
             color: #2e7d32;
-            text-align: center;
+            font-weight: 500;
         }
         .question-card {
-            background: #fafafa;
+            background: #fff;
             border: 1px solid #e0e0e0;
             border-radius: 8px;
-            padding: 18px;
-            margin-bottom: 20px;
+            padding: 15px;
+            margin-bottom: 15px;
         }
         .question-text {
             font-size: 16px;
-            font-weight: bold;
+            font-weight: 600;
             margin-bottom: 12px;
-            color: #1b5e20;
-            line-height: 1.4;
+            line-height: 1.5;
         }
         .options {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 8px;
         }
         .option-label {
-    display: flex;
-    align-items: center;
-    padding: 12px;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background 0.2s;
-    /* This prevents iOS from flashing gray when tapped */
-    -webkit-tap-highlight-color: transparent; 
-}
-
-/* Add this new rule right below .option-label */
-.option-label * {
-    pointer-events: none;
-}
+            display: block;
+            padding: 10px 12px;
+            background: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        .option-label:hover {
+            background: #f0f0f0;
+        }
         .option-label input {
-            margin-right: 12px;
-            transform: scale(1.2);
+            margin-right: 10px;
         }
         .feedback {
-            margin-top: 12px;
-            padding: 12px;
+            margin-top: 10px;
+            padding: 10px;
             border-radius: 6px;
-            font-weight: bold;
             font-size: 14px;
+            font-weight: 500;
             display: none;
         }
         .correct {
@@ -97,1020 +89,976 @@
             color: #721c24;
             border: 1px solid #f5c6cb;
         }
-        .explain {
-            font-weight: normal;
-            font-size: 13px;
-            margin-top: 6px;
-            color: #333;
-            line-height: 1.4;
-        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>කෘෂිකාර්මික කුසලතා බහුවරණ පරීක්ෂණය (प्रශ්න 100 MCQ)</h1>
-    <div class="quiz-info">📌 පිළිතුර පරීක්ෂා කිරීමට ඔබට අවශ්‍ය Radio Button එක මත ටැප් කරන්න.</div>
+    <h1>🌱 ජපාන කෘෂිකාර්මික විභාගය - ප්‍රශ්න 96</h1>
+    <div class="quiz-info">
+        💡 නිවැරදි පිළිතුර තෝරන්න. එවිට ඔබට නිවැරදිද නැද්ද යන්න සහ ඊට අදාළ කෙටි පැහැදිලි කිරීමක් බලාගත හැක.
+    </div>
 
-    <div id="quiz-holder">
+    <div id="quiz-box">
+
         <div class="question-card">
-            <div class="question-text">1. ජපානයට ඇතුළු වීමට පෙර අවම වශයෙන් සති කීයකට පෙර සත්ව සම්පත් ස්පර්ශ නොකර සිටිය යුතුද?</div>
+            <div class="question-text">1. ශාකයක මුල්, කඳ සහ පත්‍ර වර්ධනය වන අවධිය හඳුන්වන්නේ කුමන නමකින්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q1" onclick="check('f1', true)"> සති 1 ක්</label>
-                <label class="option-label"><input type="radio" name="q1" onclick="check('f1', false, 'සති 1 ක්. (ජපානයට පැමිණීමට පෙර සති 1 ක් ඇතුළත ගොවිපල සතුන් ස්පර්ශ නොකළ යුතුය.)')"> සති 2 ක්</label>
-                <label class="option-label"><input type="radio" name="q1" onclick="check('f1', false, 'සති 1 ක්.')"> සති 3 ක්</label>
+                <label class="option-label"><input type="radio" name="q1" onclick="check('f1', false, 'පෝෂණ වර්ධනය (Vegetative Growth)')"> ප්‍රජනක වර්ධනය</label>
+                <label class="option-label"><input type="radio" name="q1" onclick="check('f1', true)"> පෝෂණ වර්ධනය (Vegetative Growth)</label>
+                <label class="option-label"><input type="radio" name="q1" onclick="check('f1', false, 'පෝෂණ වර්ධනය')"> බීජ ප්‍රරෝහණය</label>
             </div>
             <div id="f1" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">2. ජපානයට ඇතුළු වූ පසු පළමු සතිය තුළ තහනම් කර ඇති ක්‍රියාව කුමක්ද?</div>
+            <div class="question-text">2. ශාකයක මල්, ගෙඩි සහ බීජ නිපදවන අවධිය හඳුන්වන්නේ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q2" onclick="check('f2', false, 'ගාල් (ගොවිපලවල්) සහ ඒ අවට ප්‍රදේශවලට ඇතුළු වීම.')"> නගරවල ගමන් කිරීම</label>
-                <label class="option-label"><input type="radio" name="q2" onclick="check('f2', true)"> ගාල් (ගොවිපලවල්) සහ ඒ අවට ප්‍රදේශවලට ඇතුළු වීම</label>
-                <label class="option-label"><input type="radio" name="q2" onclick="check('f2', false, 'ගොවිපලවල් සහ ඒ අවට ප්‍රදේශවලට ඇතුළු වීම.')"> දේශීය ආහාර ගැනීම</label>
+                <label class="option-label"><input type="radio" name="q2" onclick="check('f2', false, 'ප්‍රජනක වර්ධනය')"> පෝෂණ වර්ධනය</label>
+                <label class="option-label"><input type="radio" name="q2" onclick="check('f2', true)"> ප්‍රජනක වර්ධනය (Reproductive Growth)</label>
+                <label class="option-label"><input type="radio" name="q2" onclick="check('f2', false, 'ප්‍රජනක වර්ධනය')"> උත්ස්වේදන අවධිය</label>
             </div>
             <div id="f2" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">3. විදේශයන්හි භාවිත කරන ලද කුමන ද්‍රව්‍ය ජපානයට රැගෙන නොආ යුතුද?</div>
+            <div class="question-text">3. භෝගයන් ප්‍රභාසංස්ලේෂණය සිදු කිරීම සඳහා අත්‍යවශ්‍ය නොවන සාධකය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q3" onclick="check('f3', true)"> අපිරිසිදු වැඩ ඇඳුම්, වැඩ සපත්තු සහ දිගු බූට් සපත්තු</label>
-                <label class="option-label"><input type="radio" name="q3" onclick="check('f3', false, 'අපිරිසිදු වැඩ ඇඳුම්, වැඩ සපත්තු සහ දිගු බූට් සපත්තු')"> පොත්පත් සහ ලිපිද්‍රව්‍ය</label>
-                <label class="option-label"><input type="radio" name="q3" onclick="check('f3', false, 'අපිරිසිදු වැඩ ඇඳුම් සහ පාවහන්')"> ජංගම"* දුරකථන</label>
+                <label class="option-label"><input type="radio" name="q3" onclick="check('f3', false, 'ප්‍රභාසංස්ලේෂණයට ආලෝකය අත්‍යවශ්‍ය වේ.')"> ආලෝකය</label>
+                <label class="option-label"><input type="radio" name="q3" onclick="check('f3', false, 'ප්‍රභාසංස්ලේෂණයට කාබන්ඩයොක්සයිඩ් අවශ්‍ය වේ.')"> කාබන්ඩයොක්සයිඩ් (CO2)</label>
+                <label class="option-label"><input type="radio" name="q3" onclick="check('f3', true)"> නයිට්‍රජන් වායුව (N2)</label>
             </div>
             <div id="f3" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">4. විශේෂ පරීක්ෂණ සහතිකයක් නොමැතිව ජපානයට රැගෙන යාම සපුරා තහනම් ද්‍රව්‍ය මොනවාද?</div>
+            <div class="question-text">4. සාමාන්‍යයෙන් ආලෝකය ප්‍රබල වන විට ප්‍රභාසංස්ලේෂණ ක්‍රියාවලියට සිදුවන්නේ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q4" onclick="check('f4', false, 'මස්, හැම්, සොසේජස් සහ බේකන් වැනි මස් නිෂ්පාදන')"> එළවළු බීජ</label>
-                <label class="option-label"><input type="radio" name="q4" onclick="check('f4', true)"> මස්, හැම්, සොසේජස් සහ බේකන් වැනි මස් නිෂ්පාදන</label>
-                <label class="option-label"><input type="radio" name="q4" onclick="check('f4', false, 'මස් නිෂ්පාදන')"> කෘෂි උපකරණ</label>
+                <label class="option-label"><input type="radio" name="q4" onclick="check('f4', false, 'ප්‍රභාසංස්ලේෂණය වැඩි වේ.')"> අඩු වේ</label>
+                <label class="option-label"><input type="radio" name="q4" onclick="check('f4', true)"> වැඩි වේ (කාබෝහයිඩ්‍රේට් නිපදවීම ඉහළ යයි)</label>
+                <label class="option-label"><input type="radio" name="q4" onclick="check('f4', false, 'ප්‍රභාසංස්ලේෂණය වැඩි වේ.')"> වෙනස් නොවේ</label>
             </div>
             <div id="f4" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">5. ශාකයක මුල්, කඳ සහ පත්‍ර වර්ධනය වන අවධිය හඳුන්වන්නේ කුමන නමකින්ද?</div>
+            <div class="question-text">5. රාත්‍රී කාලයේ උෂ්ණත්වය අධික වූ විට භෝගයන්හි ආහාර ගබඩා කිරීමට සිදුවන්නේ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q5" onclick="check('f5', false, 'පෝෂණ වර්ධනය (Vegetative Growth)')"> ප්‍රජනක වර්ධනය</label>
-                <label class="option-label"><input type="radio" name="q5" onclick="check('f5', true)"> පෝෂණ වර්ධනය (Vegetative Growth)</label>
-                <label class="option-label"><input type="radio" name="q5" onclick="check('f5', false, 'පෝෂණ වර්ධනය')"> බීජ ප්‍රරෝහණය</label>
+                <label class="option-label"><input type="radio" name="q5" onclick="check('f5', false, 'උෂ්ණත්වය වැඩි වන විට ආහාර ගබඩාව අඩු වේ.')"> ගබඩා කිරීම වැඩි වේ</label>
+                <label class="option-label"><input type="radio" name="q5" onclick="check('f5', true)"> හුස්ම ගැනීම (ශ්වසනය) වැඩි වී ආහාර ගබඩා කිරීම අඩු වේ</label>
+                <label class="option-label"><input type="radio" name="q5" onclick="check('f5', false, 'ශ්වසනය වැඩි වීම නිසා ගබඩා වන ප්‍රමාණය අඩු වේ.')"> කිසිදු බලපෑමක් නැත</label>
             </div>
             <div id="f5" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">6. ශාකයක මල්, ගෙඩි සහ බීජ නිපදවන අවධිය හඳුන්වන්නේ කුමක්ද?</div>
+            <div class="question-text">6. ශාක පත්‍රවල සිදුරුවලින් ජලය වාෂ්ප වී යාමේ ක්‍රියාවලිය hඳුන්වන්නේ කුමන නමකින්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q6" onclick="check('f6', false, 'ප්‍රජනක වර්ධනය')"> පෝෂණ වර්ධනය</label>
-                <label class="option-label"><input type="radio" name="q6" onclick="check('f6', true)"> ප්‍රජනක වර්ධනය (Reproductive Growth)</label>
-                <label class="option-label"><input type="radio" name="q6" onclick="check('f6', false, 'ප්‍රජනක වර්ධනය')"> උත්ස්වේදන අවධිය</label>
+                <label class="option-label"><input type="radio" name="q6" onclick="check('f6', false, 'උත්ස්වේදනය')"> ශ්වසනය</label>
+                <label class="option-label"><input type="radio" name="q6" onclick="check('f6', true)"> උත්ස්වේදනය (Transpiration / විනිවිද යාම)</label>
+                <label class="option-label"><input type="radio" name="q6" onclick="check('f6', false, 'උත්ස්වේදනය')"> අවශෝෂණය</label>
             </div>
             <div id="f6" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">7. භෝගයන් ප්‍රභාසංස්ලේෂණය සිදු කිරීම සඳහා අත්‍යවශ්‍ය නොවන සාධකය කුමක්ද?</div>
+            <div class="question-text">7. අඳුරු කාලය (රාත්‍රිය) නිශ්චිත කාලයකට වඩා දිගු වූ විට මල් පොහොට්ටු සාදන ශාක මොනවාද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q7" onclick="check('f7', false, 'ප්‍රභාසංස්ලේෂණයට ආලෝකය අත්‍යවශ්‍ය වේ.')"> ආලෝකය</label>
-                <label class="option-label"><input type="radio" name="q7" onclick="check('f7', false, 'ප්‍රභාසංස්ලේෂණයට කාබන්ඩයොක්සයිඩ් අවශ්‍ය වේ.')"> කාබන්ඩයොක්සයිඩ් (CO2)</label>
-                <label class="option-label"><input type="radio" name="q7" onclick="check('f7', true)"> නයිට්‍රජන් වායුව (N2)</label>
+                <label class="option-label"><input type="radio" name="q7" onclick="check('f7', false, 'කෙටි දින ශාක')"> දිගු දින ශාක</label>
+                <label class="option-label"><input type="radio" name="q7" onclick="check('f7', true)"> කෙටි දින ශාක (Short-day plants)</label>
+                <label class="option-label"><input type="radio" name="q7" onclick="check('f7', false, 'කෙටි දින ශාක')"> උදේ දින ශාක</label>
             </div>
             <div id="f7" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">8. සාමාන්‍යයෙන් ආලෝකය ප්‍රබල වන විට ප්‍රභාසංස්ලේෂණ ක්‍රියාවලියට සිදුවන්නේ කුමක්ද?</div>
+            <div class="question-text">8. කෙටි දින ශාක සඳහා නිවැරදි උදාහරණය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q8" onclick="check('f8', false, 'ප්‍රභාසංස්ලේෂණය වැඩි වේ.')"> අඩු වේ</label>
-                <label class="option-label"><input type="radio" name="q8" onclick="check('f8', true)"> වැඩි වේ (කාබෝහයිඩ්‍රේට් නිපදවීම ඉහළ යයි)</label>
-                <label class="option-label"><input type="radio" name="q8" onclick="check('f8', false, 'ප්‍රභාසංස්ලේෂණය වැඩි වේ.')"> වෙනස් නොවේ</label>
+                <label class="option-label"><input type="radio" name="q8" onclick="check('f8', false, 'නිවිති යනු දිගු දින ශාකයකි.')"> නිවිති</label>
+                <label class="option-label"><input type="radio" name="q8" onclick="check('f8', true)"> ස්ට්‍රෝබෙරි සහ කපුරු මල් (Chrysanthemum)</label>
+                <label class="option-label"><input type="radio" name="q8" onclick="check('f8', false, 'ගෝවා උෂ්ණත්වය මත තීරණය වේ.')"> ගෝවා</label>
             </div>
             <div id="f8" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">9. රාත්‍රී කාලයේ උෂ්ණත්වය අධික වූ විට භෝගයන්හි ආහාර ගබඩා කිරීමට සිදුවන්නේ කුමක්ද?</div>
+            <div class="question-text">9. දිවා කාලය දිගු වූ විට (ආලෝකය වැඩිපුර ලැබෙන විට) මල් පොහොට්ටු සාදන භෝගය තෝරන්න.</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q9" onclick="check('f9', false, 'උෂ්ණත්වය වැඩි වන විට ආහාර ගබඩාව අඩු වේ.')"> ගබඩා කිරීම වැඩි වේ</label>
-                <label class="option-label"><input type="radio" name="q9" onclick="check('f9', true)"> හුස්ම ගැනීම (ශ්වසනය) වැඩි වී ආහාර ගබඩා කිරීම අඩු වේ</label>
-                <label class="option-label"><input type="radio" name="q9" onclick="check('f9', false, 'ශ්වසනය වැඩි වීම නිසා ගබඩා වන ප්‍රමාණය අඩු වේ.')"> කිසිදු බලපෑමක් නැත</label>
+                <label class="option-label"><input type="radio" name="q9" onclick="check('f9', false, 'තක්කාලි ස්වාභාවිකව වර්ධනය වේ.')"> තක්කාලි</label>
+                <label class="option-label"><input type="radio" name="q9" onclick="check('f9', true)"> නිවිති (Long-day plant)</label>
+                <label class="option-label"><input type="radio" name="q9" onclick="check('f9', false, 'ස්ට්‍රෝබෙරි කෙටි දින ශාකයකි.')"> ස්ට්‍රෝබෙරි</label>
             </div>
             <div id="f9" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">10. ශාක පත්‍රවල සිදුරුවලින් ජලය වාෂ්ප වී යාමේ ක්‍රියාවලිය හඳුන්වන්නේ කුමන නමකින්ද?</div>
+            <div class="question-text">10. පරිසර උෂ්ණත්වය පහත වැටෙන විට (සීතලට ලක්වන විට) මල් පොහොට්ටු සාදන භෝගයක් නොවන්නේ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q10" onclick="check('f10', false, 'උත්ස්වේදනය')"> ශ්වසනය</label>
-                <label class="option-label"><input type="radio" name="q10" onclick="check('f10', true)"> උත්ස්වේදනය (Transpiration / විනිවිද යාම)</label>
-                <label class="option-label"><input type="radio" name="q10" onclick="check('f10', false, 'උත්ස්වේදනය')"> අවශෝෂණය</label>
+                <label class="option-label"><input type="radio" name="q10" onclick="check('f10', false, 'රාබු වලට සීතල උෂ්ණත්වය අවශ්‍යයි.')"> රාබු</label>
+                <label class="option-label"><input type="radio" name="q10" onclick="check('f10', false, 'බ්‍රොකොලි සීතල උෂ්ණත්වයට මල් සාදයි.')"> බ්‍රොකොලි</label>
+                <label class="option-label"><input type="radio" name="q10" onclick="check('f10', true)"> තක්කාලි (උෂ්ණත්වය මත නොව වර්ධනය අනුව මල් hටගනී)</label>
             </div>
             <div id="f10" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">11. අඳුරු කාලය (රාත්‍රිය) නිශ්චිත කාලයකට වඩා දිගු වූ විට මල් පොහොට්ටු සාදන ශාක මොනවාද?</div>
+            <div class="question-text">11. වගා බිමක වැටි (Ridges / Beds) තැනීමේ ප්‍රධාන අරමුණ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q11" onclick="check('f11', false, 'කෙටි දින ශාක')"> දිගු දින ශාක</label>
-                <label class="option-label"><input type="radio" name="q11" onclick="check('f11', true)"> කෙටි දින ශාක (Short-day plants)</label>
-                <label class="option-label"><input type="radio" name="q11" onclick="check('f11', false, 'කෙටි දින ශාක')"> උදේ දින ශාක</label>
+                <label class="option-label"><input type="radio" name="q11" onclick="check('f11', true)"> ජල අපවහනය (Drainage) සහ පසෙහි වාතාශ්‍රය වැඩි දියුණු කිරීම</label>
+                <label class="option-label"><input type="radio" name="q11" onclick="check('f11', false, 'වැටි සාදන්නේ ජලය සහ වාතය පාලනයටයි.')"> පසෙහි පොහොර ප්‍රමාණය අඩු කිරීම</label>
+                <label class="option-label"><input type="radio" name="q11" onclick="check('f11', false, 'ජල අපවහනය සහ වාතාශ්‍රය ලැබීම')"> වල් පැළෑටි බීජ සම්පූර්ණයෙන් විනාශ කිරීම</label>
             </div>
             <div id="f11" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">12. කෙටි දින ශාක සඳහා නිවැරදි උදාහරණය කුමක්ද?</div>
+            <div class="question-text">12. එකම කුලයට අයත් භෝගයක් එකම බිමක අඛණ්ඩව වගා කිරීමෙන් සිදුවන හානිය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q12" onclick="check('f12', false, 'නිවිති යනු දිගු දින ශාකයකි.')"> නිවිති</label>
-                <label class="option-label"><input type="radio" name="q12" onclick="check('f12', true)"> ස්ට්‍රෝබෙරි සහ කපුරු මල් (Chrysanthemum)</label>
-                <label class="option-label"><input type="radio" name="q12" onclick="check('f12', false, 'ගෝවා උෂ්ණත්වය මත තීරණය වේ.')"> ගෝවා</label>
+                <label class="option-label"><input type="radio" name="q12" onclick="check('f12', false, 'අඛණ්ඩ වගාවෙන් අස්වැන්න අඩු වේ.')"> අස්වැන්න ඉතා ඉහළ යෑම</label>
+                <label class="option-label"><input type="radio" name="q12" onclick="check('f12', true)"> අඛණ්ඩ වගා ආබාධ (Continuous Cropping Injury / රෝග බෝවීම)</label>
+                <label class="option-label"><input type="radio" name="q12" onclick="check('f12', false, 'අඛණ්ඩ වගා ආබාධ ඇතිවීම')"> පසෙහි සාරවත් බව වැඩි වීම</label>
             </div>
             <div id="f12" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">13. දිවා කාලය දිගු වූ විට (ආලෝකය වැඩිපුර ලැබෙන විට) මල් පොහොට්ටු සාදන භෝගය තෝරන්න.</div>
+            <div class="question-text">13. අඛණ්ඩ වගා ආබාධ වළක්වා ගැනීම සඳහා ගත යුතු හොඳම පිළියම කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q13" onclick="check('f13', false, 'තක්කාලි ස්වාභාවිකව වර්ධනය වේ.')"> තක්කාලි</label>
-                <label class="option-label"><input type="radio" name="q13" onclick="check('f13', true)"> නිවිති (Long-day plant)</label>
-                <label class="option-label"><input type="radio" name="q13" onclick="check('f13', false, 'ස්ට්‍රෝබෙරි කෙටි දින ශාකයකි.')"> ස්ට්‍රෝබෙරි</label>
+                <label class="option-label"><input type="radio" name="q13" onclick="check('f13', true)"> බෝග මාරුව (විවිධ කුලවල බෝග මාරුවෙන් මාරුවට වගා කිරීම)</label>
+                <label class="option-label"><input type="radio" name="q13" onclick="check('f13', false, 'වැඩිපුර ජලය දැමීමෙන් වගා ආබාධ නතර නොවේ.')"> වැඩිපුර ජලය දැමීම</label>
+                <label class="option-label"><input type="radio" name="q13" onclick="check('f13', false, 'බෝග මාරුවයි (Crop Rotation).')"> පළිබෝධනාශක අධිකව ඉසීම</label>
             </div>
             <div id="f13" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">14. පරිසර උෂ්ණත්වය පහත වැටෙන විට (සීතලට ලක්වන විට) මල් පොහොට්ටු සාදන භෝගයක් නොවන්නේ කුමක්ද?</div>
+            <div class="question-text">14. භෝගයක කඳේ හෝ වැලේ ඇති අග්‍රස්ථ මුදුන් දළු කපා ඉවත් කිරීමේ වගා සත්කාරය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q14" onclick="check('f14', false, 'රාබු වලට සීතල උෂ්ණත්වය අවශ්‍යයි.')"> රාබු</label>
-                <label class="option-label"><input type="radio" name="q14" onclick="check('f14', false, 'බ්‍රොකොලි සීතල උෂ්ණත්වයට මල් සාදයි.')"> ბ්‍රොකොලි</label>
-                <label class="option-label"><input type="radio" name="q14" onclick="check('f14', true)"> තක්කාලි (උෂ්ණත්වය මත නොව වර්ධනය අනුව මල් හටගනී)</label>
+                <label class="option-label"><input type="radio" name="q14" onclick="check('f14', false, 'තුනී කිරීම යනු ගෙඩි ඉවත් කිරීමයි.')"> තුනී කිරීම</label>
+                <label class="option-label"><input type="radio" name="q14" onclick="check('f14', true)"> මුදුන් දළු කැපීම (Pinching / Pruning)</label>
+                <label class="option-label"><input type="radio" name="q14" onclick="check('f14', false, 'මුදුන් දළු කැපීම.')"> කෘතිම පරාගණය</label>
             </div>
             <div id="f14" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">15. වගා බිමක වැටි (Ridges / Beds) තැනීමේ ප්‍රධාන අරමුණ කුමක්ද?</div>
+            <div class="question-text">15. උසස් තත්ත්වයේ විශාල ගෙඩි ලබා ගැනීම සඳහා දුර්වල හෝ අනවශ්‍ය ගෙඩි කඩා ඉවත් කිරීම hඳුන්වන්නේ?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q15" onclick="check('f15', true)"> ජල අපවහනය (Drainage) සහ පසෙහි වාතාශ්‍රය වැඩි දියුණු කිරීම</label>
-                <label class="option-label"><input type="radio" name="q15" onclick="check('f15', false, 'වැටි සාදන්නේ ජලය සහ වාතය පාලනයටයි.')"> පසෙහි පොහොර ප්‍රමාණය අඩු කිරීම</label>
-                <label class="option-label"><input type="radio" name="q15" onclick="check('f15', false, 'ජල අපවහනය සහ වාතාශ්‍රය ලැබීම')"> වල් පැලෑටි බීජ සම්පූර්ණයෙන් විනාශ කිරීම</label>
+                <label class="option-label"><input type="radio" name="q15" onclick="check('f15', false, 'දළු කැපීම කඳට අදාළ වේ.')"> මුදුන් දළු කැපීම</label>
+                <label class="option-label"><input type="radio" name="q15" onclick="check('f15', true)"> ගෙඩි කඩා තුනී කිරීම (Thinning)</label>
+                <label class="option-label"><input type="radio" name="q15" onclick="check('f15', false, 'ගෙඩි කඩා තුනී කිරීම.')"> කෘතිම පරාගණය</label>
             </div>
             <div id="f15" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">16. එකම කුලයට අයත් භෝගයක් එකම බිමක අඛණ්ඩව වගා කිරීමෙන් සිදුවන හානිය කුමක්ද?</div>
+            <div class="question-text">16. හරිතාගාර (Greenhouse) වගාවන් තුළ වාතාශ්‍රය සහ උෂ්ණත්වය පාලනය කිරීමට අමතරව පරාගණය සඳහා සිදු කරන්නේ?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q16" onclick="check('f16', false, 'අඛණ්ඩ වගාවෙන් අස්වැන්න අඩු වේ.')"> අස්වැන්න ඉතා ඉහළ යෑම</label>
-                <label class="option-label"><input type="radio" name="q16" onclick="check('f16', true)"> අඛණ්ඩ වගා ආබාධ (Continuous Cropping Injury / රෝග බෝවීම)</label>
-                <label class="option-label"><input type="radio" name="q16" onclick="check('f16', false, 'අඛණ්ඩ වගා ආබාධ ඇතිවීම')"> පසෙහි සාරවත් බව වැඩි වීම</label>
+                <label class="option-label"><input type="radio" name="q16" onclick="check('f16', false, 'උත්ස්වේදනය යනු ජලය පිටවීමයි.')"> උත්ස්වේදනය</label>
+                <label class="option-label"><input type="radio" name="q16" onclick="check('f16', true)"> කෘතිම පරාගණය (Artificial Pollination)</label>
+                <label class="option-label"><input type="radio" name="q16" onclick="check('f16', false, 'කෘතිම පරාගණය.')"> පූර්ව සිසිලනය</label>
             </div>
             <div id="f16" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">17. අඛණ්ඩ වගා ආබාධ වළක්වා ගැනීම සඳහා ගත යුතු හොඳම පිළියම කුමක්ද?</div>
+            <div class="question-text">17. වල්නාශක (Weedicides) භාවිතයේදී අනුගමනය කළ යුතු ප්‍රධානතම ආරක්ෂක නීතියක් වන්නේ?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q17" onclick="check('f17', true)"> බෝග මාරුව (විවිධ කුලවල බෝග මාරුවෙන් මාරුවට වගා කිරීම)</label>
-                <label class="option-label"><input type="radio" name="q17" onclick="check('f17', false, 'වැඩිපුර ජලය දැමීමෙන් වගා ආබාධ නතර නොවේ.')"> වැඩිපුර ජලය දැමීම</label>
-                <label class="option-label"><input type="radio" name="q17" onclick="check('f17', false, 'බෝග මාරුවයි (Crop Rotation).')"> පළිබෝධනාශක අධිකව ඉසීම</label>
+                <label class="option-label"><input type="radio" name="q17" onclick="check('f17', true)"> වල්නාශක ඉසීමට ගන්නා උපකරණ පළිබෝධ නාශක ඉසීමට කිසිවිටෙක භාවිත නොකිරීම</label>
+                <label class="option-label"><input type="radio" name="q17" onclick="check('f17', false, 'එකම උපකරණය භාවිත කිරීමෙන් භෝග වලට හානි සිදු වේ.')"> එකම උපකරණය හැමදේටම භාවිත කිරීම</label>
+                <label class="option-label"><input type="radio" name="q17" onclick="check('f17', false, 'පළමු වැන්න නිවැරදියි.')"> ලියාපදිංචි නොකළ ද්‍රව්‍ය ඉසීම</label>
             </div>
             <div id="f17" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">18. භෝගයක කඳේ හෝ වැලේ ඇති අග්‍රස්ථ මුදුන් දළු කපා ඉවත් කිරීමේ වගා සත්කාරය කුමක්ද?</div>
+            <div class="question-text">18. පළිබෝධනාශකයක් භාවිතයට පෙර අනිවාර්යයෙන්ම කළ යුත්තේ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q18" onclick="check('f18', false, 'තුනී කිරීම යනු ගෙඩි ඉවත් කිරීමයි.')"> තුනී කිරීම</label>
-                <label class="option-label"><input type="radio" name="q18" onclick="check('f18', true)"> මුදුන් දළු කැපීම (Pinching / Pruning)</label>
-                <label class="option-label"><input type="radio" name="q18" onclick="check('f18', false, 'මුදුන් දළු කැපීම.')"> කෘතිම පරාගණය</label>
+                <label class="option-label"><input type="radio" name="q18" onclick="check('f18', true)"> එහි ලේබලය (Label) හොඳින් කියවා සාන්ද්‍රණය සහ නීති තේරුම් ගැනීම</label>
+                <label class="option-label"><input type="radio" name="q18" onclick="check('f18', false, 'ලේබලය නොකියවා ඉසීම අනතුරුදායකයි.')"> ජලය පමණක් එකතු කිරීම</label>
+                <label class="option-label"><input type="radio" name="q18" onclick="check('f18', false, 'ලේබලය හොඳින් කියවීම.')"> යන්ත්‍රය උපරිම වේගයට සැකසීම</label>
             </div>
             <div id="f18" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">19. උසස් තත්ත්වයේ විශාල ගෙඩි ලබා ගැනීම සඳහා දුර්වල හෝ අනවශ්‍ය ගෙඩි කඩා ඉවත් කිරීම හඳුන්වන්නේ?</div>
+            <div class="question-text">19. පළිබෝධනාශක ඉසීමේදී කලිසම් වාටිය සහ බූට් සපත්තු සකස් කළ යුත්තේ?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q19" onclick="check('f19', false, 'දළු කැපීම කඳට අදාළ වේ.')"> මුදුන් දළු කැපීම</label>
-                <label class="option-label"><input type="radio" name="q19" onclick="check('f19', true)"> ගෙඩි කඩා තුනී කිරීම (Thinning)</label>
-                <label class="option-label"><input type="radio" name="q19" onclick="check('f19', false, 'ගෙඩි කඩා තුනී කිරීම.')"> කෘතිම පරාගණය</label>
+                <label class="option-label"><input type="radio" name="q19" onclick="check('f19', false, 'කලිසම ඇතුළට දැමීමෙන් කෙමිකල් ශරීරයට උරාගත හැක.')"> කලිසම් වාටිය දිගු බූට් සපත්තු ඇතුළට දමා</label>
+                <label class="option-label"><input type="radio" name="q19" onclick="check('f19', true)"> කලිසම් වාටිය දිගු බූට් සපත්තු උඩින් (වැසෙන සේ) සිටින ලෙස</label>
+                <label class="option-label"><input type="radio" name="q19" onclick="check('f19', false, 'කලිසම් වාටිය බූට් එකට උඩින් තිබිය යුතුය.')"> සාමාන්‍ය කෙටි කලිසම් ඇඳ</label>
             </div>
             <div id="f19" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">20. හරිතාගාර (Greenhouse) වගාවන් තුළ වාතාශ්‍රය සහ උෂ්ණත්වය පාලනය කිරීමට අමතරව පරාගණය සඳහා සිදු කරන්නේ?</div>
+            <div class="question-text">20. පළිබෝධනාශක ඉස අවසන් වූ වහාම පුද්ගලික ආරක්ෂාව සඳහා කළ යුත්තේ?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q20" onclick="check('f20', false, 'උත්ස්වේදනය යනු ජලය පිටවීමයි.')"> උත්ස්වේදනය</label>
-                <label class="option-label"><input type="radio" name="q20" onclick="check('f20', true)"> කෘතිම පරාගණය (Artificial Pollination)</label>
-                <label class="option-label"><input type="radio" name="q20" onclick="check('f20', false, 'කෘතිම පරාගණය.')"> පූර්ව සිසිලනය</label>
+                <label class="option-label"><input type="radio" name="q20" onclick="check('f20', false, 'නෑමට හෝ පිරිසිදු වීමට ප්‍රථම විවේක නොගත යුතුය.')"> විවේක ගැනීම</label>
+                <label class="option-label"><input type="radio" name="q20" onclick="check('f20', true)"> උපකරණ සෝදා, තමාගේ දෑත් සහ උගුර (කට) හොඳින් සෝදා පිරිසිදු කර ගැනීම</label>
+                <label class="option-label"><input type="radio" name="q20" onclick="check('f20', false, 'දෑත් සහ උගුර පිරිසිදු කිරීමයි.')"> කෙලින්ම කෑම ගැනීම</label>
             </div>
             <div id="f20" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">21. වල්නාශක (Weedicides) භාවිතයේදී අනුගමනය කළ යුතු ප්‍රධානතම ආරක්ෂක නීතියක් වන්නේ?</div>
+            <div class="question-text">21. විෂ සහිත පළිබෝධනාශක ද්‍රව්‍ය ආරක්ෂිතව ගබඩා කළ යුත්තේ කෙසේද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q21" onclick="check('f21', true)"> වල්නාශක ඉසීමට ගන්නා උපකරණ පළිබෝධ නාශක ඉසීමට කිසිවිටෙක භාවිත නොකිරීම</label>
-                <label class="option-label"><input type="radio" name="q21" onclick="check('f21', false, 'එකම උපකරණය භාවිත කිරීමෙන් භෝග වලට හානි සිදු වේ.')"> එකම උපකරණය හැමදේටම භාවිත කිරීම</label>
-                <label class="option-label"><input type="radio" name="q21" onclick="check('f21', false, 'පළමු වැන්න නිවැරදියි.')"> ලියාපදිංචි නොකළ ද්‍රව්‍ය ඉසීම</label>
+                <label class="option-label"><input type="radio" name="q21" onclick="check('f21', false, 'විවෘතව තැබීම සපුරා තහනම්ය.')"> එළිමහනේ විවෘතව</label>
+                <label class="option-label"><input type="radio" name="q21" onclick="check('f21', true)"> භාවිතය ලේඛනගත කර, සාමාන්‍ය ද්‍රව්‍යවලින් වෙන් කර පැහැදිලි සලකුණු යොදා අගුලු දැමූ ගබඩාවක</label>
+                <label class="option-label"><input type="radio" name="q21" onclick="check('f21', false, 'අගුලු දැමූ විශේෂ ගබඩාවක.')"> ට්‍රැක්ටර් පෙට්ටිය තුළ</label>
             </div>
             <div id="f21" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">22. පළිබෝධනාශකයක් භාවිතයට පෙර අනිවාර්යයෙන්ම කළ යුත්තේ කුමක්ද?</div>
+            <div class="question-text">22. කෘෂිකාර්මික යන්ත්‍රෝපකරණකරණ ක්‍රියාත්මක කිරීමට පෙර සිදු කළ යුතු අත්‍යවශ්‍යම පරීක්ෂාව කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q22" onclick="check('f22', true)"> එහි ලේබලය (Label) හොඳින් කියවා සාන්ද්‍රණය සහ නීති තේරුම් ගැනීම</label>
-                <label class="option-label"><input type="radio" name="q22" onclick="check('f22', false, 'ලේබලය නොකියවා ඉසීම අනතුරුදායකයි.')"> ජලය පමණක් එකතු කිරීම</label>
-                <label class="option-label"><input type="radio" name="q22" onclick="check('f22', false, 'ලේබලය හොඳින් කියවීම.')"> යන්ත්‍රය උපරිම වේගයට සැකසීම</label>
+                <label class="option-label"><input type="radio" name="q22" onclick="check('f22', true)"> දෛනික/වැඩට පෙර පරීක්ෂාව (Pre-operational check)</label>
+                <label class="option-label"><input type="radio" name="q22" onclick="check('f22', false, 'වැඩට පෙර කරන පරීක්ෂාව දෛනික පරීක්ෂාවයි.')"> මාසික නඩත්තු පරීක්ෂාව පමණි</label>
+                <label class="option-label"><input type="radio" name="q22" onclick="check('f22', false, 'දෛනික පරීක්ෂාව.')"> කිසිදු පරීක්ෂාවක් අවශ්‍ය නැත</label>
             </div>
             <div id="f22" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">23. පළිබෝධනාශක ඉසීමේදී කලිසම් වාටිය සහ බූට් සපත්තු සකස් කළ යුත්තේ?</div>
+            <div class="question-text">23. තණකොළ කපන යන්ත්‍රයක් (Brush Cutter) පණගැන්වීමේදී 'චෝක් ලීවරය' (Choke Lever) තැබිය යුතු නිවැරදි අවස්ථාව?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q23" onclick="check('f23', false, 'කලිසම ඇතුළට දැමීමෙන් කෙමිකල් ශරීරයට උරාගත හැක.')"> කලිසම් වාටිය දිගු බූට් සපත්තු ඇතුළට දමා</label>
-                <label class="option-label"><input type="radio" name="q23" onclick="check('f23', true)"> කලිසම් වාටිය දිගු බූට් සපත්තු උඩින් (වැසෙන සේ) සිටින ලෙස</label>
-                <label class="option-label"><input type="radio" name="q23" onclick="check('f23', false, 'කලිසම් වාටිය බූට් එකට උඩින් තිබිය යුතුය.')"> සාමාන්‍ය කෙටි කලිසම් ඇඳ</label>
+                <label class="option-label"><input type="radio" name="q23" onclick="check('f23', false, 'පණගන්වන විට චෝක් එක වැසිය යුතුය.')"> විවෘත (Open) තත්ත්වයේ</label>
+                <label class="option-label"><input type="radio" name="q23" onclick="check('f23', true)"> වසා දැමූ (Close) තත්ත්වයේ (වාතය එන ප්‍රමාණය අඩු කිරීමට)</label>
+                <label class="option-label"><input type="radio" name="q23" onclick="check('f23', false, 'වසා දැමූ (Close) තත්ත්වයේ.')"> ගලවා ඉවත් කර</label>
             </div>
             <div id="f23" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">24. පළිබෝධනාශක ඉස අවසන් වූ වහාම පුද්ගලික ආරක්ෂාව සඳහා කළ යුත්තේ?</div>
+            <div class="question-text">24. තණකොළ කපන යන්ත්‍රයේ එන්ජිම පණගැන්වුණු වහාම චෝක් ලීවරයට කළ යුත්තේ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q24" onclick="check('f24', false, 'නෑමට හෝ පිරිසිදු වීමට ප්‍රථම විවේක නොගත යුතුය.')"> විවේක ගැනීම</label>
-                <label class="option-label"><input type="radio" name="q24" onclick="check('f24', true)"> උපකරණ සෝදා, තමාගේ දෑත් සහ උගුර (කට) හොඳින් සෝදා පිරිසිදු කර ගැනීම</label>
-                <label class="option-label"><input type="radio" name="q24" onclick="check('f24', false, 'දෑත් සහ උගුර පිරිසිදු කිරීමයි.')"> කෙලින්ම කෑම ගැනීම</label>
+                <label class="option-label"><input type="radio" name="q24" onclick="check('f24', false, 'එලෙසම තැබුවහොත් එන්ජිම නතර වේ.')"> වසා දමාම තැබීම</label>
+                <label class="option-label"><input type="radio" name="q24" onclick="check('f24', true)"> නැවත 'විවෘත' (Open) තත්ත්වයට පත් කිරීම</label>
+                <label class="option-label"><input type="radio" name="q24" onclick="check('f24', false, 'වහාම විවෘත (Open) කළ යුතුය.')"> එන්ජිම වහාම අක්‍රිය කිරීම</label>
             </div>
             <div id="f24" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">25. විෂ සහිත පළිබෝධනාශක ද්‍රව්‍ය ආරක්ෂිතව ගබඩා කළ යුත්තේ කෙසේද?</div>
+            <div class="question-text">25. අස්වනු නෙළූ වහාම එළවළු සහ පළතුරු සිසිල් කිරීමේ (Pre-cooling) ප්‍රධාන අරමුණ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q25" onclick="check('f25', false, 'විවෘතව තැබීම සපුරා තහනම්ය.')"> එළිමහනේ විවෘතව</label>
-                <label class="option-label"><input type="radio" name="q25" onclick="check('f25', true)"> භාවිතය ලේඛනගත කර, සාමාන්‍ය ද්‍රව්‍යවලින් වෙන් කර පැහැදිලි සලකුණු යොදා අගුලු දැමූ ගබඩාවක</label>
-                <label class="option-label"><input type="radio" name="q25" onclick="check('f25', false, 'අගුලු දැමූ විශේෂ ගබඩාවක.')"> ට්‍රැක්ටර් පෙට්ටිය තුළ</label>
+                <label class="option-label"><input type="radio" name="q25" onclick="check('f25', false, 'සිසිල් කරන්නේ බර වෙනස් කිරීමට නොවේ.')"> බර වැඩි කිරීම</label>
+                <label class="option-label"><input type="radio" name="q25" onclick="check('f25', true)"> අස්වැන්නේ නැවුම් බව (Freshness) උපරිමයෙන් රැක ගැනීම</label>
+                <label class="option-label"><input type="radio" name="q25" onclick="check('f25', false, 'නැවුම් බව රැක ගැනීම.')"> වර්ණය වෙනස් කිරීම</label>
             </div>
             <div id="f25" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">26. කෘෂිකාර්මික යන්ත්‍රෝපකරණ ක්‍රියාත්මක කිරීමට පෙර සිදු කළ යුතු අත්‍යවශ්‍යම පරීක්ෂාව කුමක්ද?</div>
+            <div class="question-text">26. පූර්ව සිසිලනය (Pre-cooling) සඳහා බහුලවම භාවිත වන නවීන තාක්ෂණික ක්‍රමවේදය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q26" onclick="check('f26', true)"> දෛනික/වැඩට පෙර පරීක්ෂාව (Pre-operational check)</label>
-                <label class="option-label"><input type="radio" name="q26" onclick="check('f26', false, 'වැඩට පෙර කරන පරීක්ෂාව දෛනික පරීක්ෂාවයි.')"> මාසික නඩත්තු පරීක්ෂාව පමණි</label>
-                <label class="option-label"><input type="radio" name="q26" onclick="check('f26', false, 'දෛනික පරීක්ෂාව.')"> කිසිදු පරීක්ෂාවක් අවශ්‍ය නැත</label>
+                <label class="option-label"><input type="radio" name="q26" onclick="check('f26', true)"> රික්තක පූර්ව සිසිලනය (Vacuum Pre-cooling)</label>
+                <label class="option-label"><input type="radio" name="q26" onclick="check('f26', false, 'රික්තක පූර්ව සිසිලනයයි.')"> සාමාන්‍ය පන්කා සුළඟ</label>
+                <label class="option-label"><input type="radio" name="q26" onclick="check('f26', false, 'රික්තක පූර්ව සිසිලනය.')"> ළිං ජලයේ ගිල්වීම</label>
             </div>
             <div id="f26" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">27. තණකොළ කපන යන්ත්‍රයක් (Brush Cutter) පණගැන්වීමේදී 'චෝක් ලීවරය' (Choke Lever) තැබිය යුතු නිවැරදි අවස්ථාව?</div>
+            <div class="question-text">27. ආසියාව මුල්කොට ලොව පුරා ප්‍රධාන වශයෙන් වගා කෙරෙන වී වර්ග දෙක කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q27" onclick="check('f27', false, 'පණගන්වන විට චෝක් එක වැසිය යුතුය.')"> විවෘත (Open) තත්ත්වයේ</label>
-                <label class="option-label"><input type="radio" name="q27" onclick="check('f27', true)"> වසා දැමූ (Close) තත්ත්වයේ (වාතය එන ප්‍රමාණය අඩු කිරීමට)</label>
-                <label class="option-label"><input type="radio" name="q27" onclick="check('f27', false, 'වසා දැමූ (Close) තත්ත්වයේ.')"> ගලවා ඉවත් කර</label>
+                <label class="option-label"><input type="radio" name="q27" onclick="check('f27', true)"> ඉන්ඩිකา සහ ජපොනිකා (Indica & Japonica)</label>
+                <label class="option-label"><input type="radio" name="q27" onclick="check('f27', false, 'ඉන්ඩිකා සහ ජපොනිකා')"> ආසියානු වී සහ අප්‍රිකානු වී</label>
+                <label class="option-label"><input type="radio" name="q27" onclick="check('f27', false, 'වැරදි පිළිතුරකි')"> වල් වී සහ වගා වී</label>
             </div>
             <div id="f27" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">28. තණකොළ කපන යන්ත්‍රයේ එන්ජිම පණගැන්වුණු වහාම චෝක් ලීවරයට කළ යුත්තේ කුමක්ද?</div>
+            <div class="question-text">28. ජපානයේ වගා කරනු ලබන සහල් වර්ග බොහොමයක් අයත් වන්නේ කුමන සහල් කාණ්ඩයටද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q28" onclick="check('f28', false, 'එලෙසම තැබුවහොත් එන්ජිම නතර වේ.')"> වසා දමාම තැබීම</label>
-                <label class="option-label"><input type="radio" name="q28" onclick="check('f28', true)"> නැවත 'විවෘත' (Open) තත්ත්වයට පත් කිරීම</label>
-                <label class="option-label"><input type="radio" name="q28" onclick="check('f28', false, 'වහාම විවෘත (Open) කළ යුතුය.')"> එන්ජිම වහාම අක්‍රිය කිරීම</label>
+                <label class="option-label"><input type="radio" name="q28" onclick="check('f28', false, 'ජපොනිකා සහල්')"> ඉන්ඩිකා සහල් (Indica)</label>
+                <label class="option-label"><input type="radio" name="q28" onclick="check('f28', true)"> ජපොනිකා සහල් (Japonica - ඇලෙන සුළු සහල්)</label>
+                <label class="option-label"><input type="radio" name="q28" onclick="check('f28', false, 'ජපොනිකා සහල්')"> අප්‍රිකානු සහල්</label>
             </div>
             <div id="f28" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">29. අස්වනු නෙළූ වහාම එළවළු සහ පළතුරු සිසිල් කිරීමේ (Pre-cooling) ප්‍රධාන අරමුණ කුමක්ද?</div>
+            <div class="question-text">29. වී ඇටයක බාහිරින් ඇති කුමන කොටස ඉවත් කළ පසු අපට ආහාරයට ගන්නා සහල් (හාල්) ලැබේද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q29" onclick="check('f29', false, 'සිසිල් කරන්නේ බර වෙනස් කිරීමට නොවේ.')"> බර වැඩි කිරීම</label>
-                <label class="option-label"><input type="radio" name="q29" onclick="check('f29', true)"> අස්වැන්නේ නැවුම් බව (Freshness) උපරිමයෙන් රැක ගැනීම</label>
-                <label class="option-label"><input type="radio" name="q29" onclick="check('f29', false, 'නැවුම් බව රැක ගැනීම.')"> වර්ණය වෙනස් කිරීම</label>
+                <label class="option-label"><input type="radio" name="q29" onclick="check('f29', false, 'පොත්ත ඉවත් කළ යුතුය.')"> නිවුඩ්ඩ</label>
+                <label class="option-label"><input type="radio" name="q29" onclick="check('f29', true)"> පොත්ත (Rice Husk)</label>
+                <label class="option-label"><input type="radio" name="q29" onclick="check('f29', false, 'පොත්ත')"> කලල රූපය</label>
             </div>
             <div id="f29" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">30. පූර්ව සිසිලනය (Pre-cooling) සඳහා බහුලවම භාවිත වන නවීන තාක්ෂණික ක්‍රමවේදය කුමක්ද?</div>
+            <div class="question-text">30. ශාකයක පත්‍ර, දඬු සහ මුල් වැනි වර්ධන අවයව හැඳින්වෙන්නේ කුමන නමකින්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q30" onclick="check('f30', true)"> රික්තක පූර්ව සිසිලනය (Vacuum Pre-cooling)</label>
-                <label class="option-label"><input type="radio" name="q30" onclick="check('f30', false, 'රික්තක පූර්ව සිසිලනයයි.')"> සාමාන්‍ය පන්කා සුළඟ</label>
-                <label class="option-label"><input type="radio" name="q30" onclick="check('f30', false, 'රික්තක පූර්ව සිසිලනය.')"> ළිං ජලයේ ගිල්වීම</label>
+                <label class="option-label"><input type="radio" name="q30" onclick="check('f30', false, 'පෝෂණ/වර්ධක අවයව')"> ප්‍රජනක අවයව</label>
+                <label class="option-label"><input type="radio" name="q30" onclick="check('f30', true)"> පෝෂණ අවයව (Vegetative organs)</label>
+                <label class="option-label"><input type="radio" name="q30" onclick="check('f30', false, 'පෝෂණ අවයව')"> ශ්වසන අවයව</label>
             </div>
             <div id="f30" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">31. ආසියාව මුල්කොට ලොව පුරා ප්‍රධාන වශයෙන් වගා කෙරෙන වී වර්ග දෙක කුමක්ද?</div>
+            <div class="question-text">31. ශාකයක මල්, පලතුරු සහ බීජ වැනි පරපුර බිහි කරන අවයව හැඳින්වෙන්නේ කුමන නමකින්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q31" onclick="check('f31', true)"> ඉන්ඩිකා සහ ජපොනිකා (Indica & Japonica)</label>
-                <label class="option-label"><input type="radio" name="q31" onclick="check('f31', false, 'ඉන්ඩිකා සහ ජපොනිකා')"> ආසියානු වී සහ අප්‍රිකානු වී</label>
-                <label class="option-label"><input type="radio" name="q31" onclick="check('f31', false, 'වැරදි පිළිතුරකි')"> වල් වී සහ වගා වී</label>
+                <label class="option-label"><input type="radio" name="q31" onclick="check('f31', false, 'ප්‍රජනක අවයව')"> පෝෂණ අවයව</label>
+                <label class="option-label"><input type="radio" name="q31" onclick="check('f31', true)"> ප්‍රජනක අවයව (Reproductive organs)</label>
+                <label class="option-label"><input type="radio" name="q31" onclick="check('f31', false, 'ප්‍රජනක අවයව')"> වර්ධක අවයව</label>
             </div>
             <div id="f31" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">32. ජපානයේ වගා කරනු ලබන සහල් වර්ග බොහොමයක් අයත් වන්නේ කුමන සහල් කාණ්ඩයටද?</div>
+            <div class="question-text">32. ශාකයේ පත්‍ර, දඬු සහ මුල් වර්ධනය වන අවධිය කුමන වර්ධනයක් ලෙස hඳුන්වයිද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q32" onclick="check('f32', false, 'ජපොනිකා සහල්')"> ඉන්ඩිකා සහල් (Indica)</label>
-                <label class="option-label"><input type="radio" name="q32" onclick="check('f32', true)"> ජපොනිකා සහල් (Japonica - ඇලෙන සුළු සහල්)</label>
-                <label class="option-label"><input type="radio" name="q32" onclick="check('f32', false, 'ජපොනිකා සහල්')"> අප්‍රිකානු සහල්</label>
+                <label class="option-label"><input type="radio" name="q32" onclick="check('f32', false, 'පෝෂණ වර්ධනය')"> ප්‍රජනක වර්ධනය</label>
+                <label class="option-label"><input type="radio" name="q32" onclick="check('f32', true)"> පෝෂණ වර්ධනය (Vegetative growth)</label>
+                <label class="option-label"><input type="radio" name="q32" onclick="check('f32', false, 'පෝෂණ වර්ධනය')"> ද්විතීයික වර්ධනය</label>
             </div>
             <div id="f32" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">33. වී ඇටයක බාහිරින් ඇති කුමන කොටස ඉවත් කළ පසු අපට ආහාරයට ගන්නා සහල් (හාල්) ලැබේද?</div>
+            <div class="question-text">33. භෝග විසින් සූර්ය ආලෝකය, කාබන්ඩයොක්සයිඩ් (CO2) සහ ජලය (H2O) යොදාගෙන කාබෝහයිඩ්රේට (පිෂ්ඨය) නිපදවන ක්‍රියාවලිය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q33" onclick="check('f33', false, 'පොත්ත ඉවත් කළ යුතුය.')"> නිවුඩ්ඩ</label>
-                <label class="option-label"><input type="radio" name="q33" onclick="check('f33', true)"> පොත්ත (Rice Husk)</label>
-                <label class="option-label"><input type="radio" name="q33" onclick="check('f33', false, 'පොත්ත')"> කලල රූපය</label>
+                <label class="option-label"><input type="radio" name="q33" onclick="check('f33', false, 'ප්‍රභාසංස්ලේෂණය')"> ශ්වසනය</label>
+                <label class="option-label"><input type="radio" name="q33" onclick="check('f33', true)"> ප්‍රභාසංස්ලේෂණය (Photosynthesis)</label>
+                <label class="option-label"><input type="radio" name="q33" onclick="check('f33', false, 'ප්‍රභාසංස්ලේෂණය')"> උත්ස්වේදනය</label>
             </div>
             <div id="f33" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">34. ශාකයක පත්‍ර, දඬු සහ මුල් වැනි වර්ධන අවයව හැඳින්වෙන්නේ කුමන නමකින්ද?</div>
+            <div class="question-text">34. පොදු රීතියක් ලෙස, සූර්ය ආලෝකය ප්‍රබල වන විට ප්‍රභාසංස්ලේෂණ ක්‍රියාවලියට සිදුවන්නේ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q34" onclick="check('f34', false, 'පෝෂණ/වර්ධක අවයව')"> ප්‍රජනක අවයව</label>
-                <label class="option-label"><input type="radio" name="q34" onclick="check('f34', true)"> පෝෂණ අවයව (Vegetative organs)</label>
-                <label class="option-label"><input type="radio" name="q34" onclick="check('f34', false, 'පෝෂණ අවයව')"> ශ්වසන අවයව</label>
+                <label class="option-label"><input type="radio" name="q34" onclick="check('f34', false, 'ප්‍රභාසංස්ලේෂණය වැඩි වේ.')"> ප්‍රභාසංස්ලේෂණය අඩු වේ</label>
+                <label class="option-label"><input type="radio" name="q34" onclick="check('f34', true)"> ප්‍රභාසංස්ලේෂණය වැඩි වේ</label>
+                <label class="option-label"><input type="radio" name="q34" onclick="check('f34', false, 'ප්‍රභාසංස්ලේෂණය වැඩි වේ.')"> කිසිදු වෙනසක් සිදු නොවේ</label>
             </div>
             <div id="f34" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">35. ශාකයක මල්, පලතුරු සහ බීජ වැනි පරපුර බිහි කරන අවයව හැඳින්වෙන්නේ කුමන නමකින්ද?</div>
+            <div class="question-text">35. වගා බිමක වැටි (Ridges) සෑදීමේ ප්‍රධානතම අරමුණ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q35" onclick="check('f35', false, 'ප්‍රජනක අවයව')"> පෝෂණ අවයව</label>
-                <label class="option-label"><input type="radio" name="q35" onclick="check('f35', true)"> ප්‍රජනක අවයව (Reproductive organs)</label>
-                <label class="option-label"><input type="radio" name="q35" onclick="check('f35', false, 'ප්‍රජනක අවයව')"> වර්ධක අවයව</label>
+                <label class="option-label"><input type="radio" name="q35" onclick="check('f35', false, 'භෝග වගාවට සුදුසු උස් බිමක් සහ ජලාපවහනය සැකසීම')"> වල් පැළෑටි බෝ කිරීම</label>
+                <label class="option-label"><input type="radio" name="q35" onclick="check('f35', true)"> භෝග වගා කිරීමට සුදුසු උස් ස්ථානයක් සහ ජලාපවහනය නිර්මාණය කිරීම</label>
+                <label class="option-label"><input type="radio" name="q35" onclick="check('f35', false, 'දෙවැන්න නිවැරදියි')"> පසෙහි ජලය රඳවා තබා ගැනීම</label>
             </div>
             <div id="f35" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">36. ශාකයේ පත්‍ර, දඬු සහ මුල් වර්ධනය වන අවධිය කුමන වර්ධනයක් ලෙස හඳුන්වයිද?</div>
+            <div class="question-text">36. අතින් වැටි සැකසීමේදී බහුලවම භාවිත කරන සාම්ප්‍රදායික ගොවිපල උපකරණය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q36" onclick="check('f36', false, 'පෝෂණ වර්ධනය')"> ප්‍රජනක වර්ධනය</label>
-                <label class="option-label"><input type="radio" name="q36" onclick="check('f36', true)"> පෝෂණ වර්ධනය (Vegetative growth)</label>
-                <label class="option-label"><input type="radio" name="q36" onclick="check('f36', false, 'පෝෂණ වර්ධනය')"> ද්විතීයික වර්ධනය</label>
+                <label class="option-label"><input type="radio" name="q36" onclick="check('f36', false, 'උදැල්ල')"> නගුල</label>
+                <label class="option-label"><input type="radio" name="q36" onclick="check('f36', true)"> උදැල්ල (Hoe)</label>
+                <label class="option-label"><input type="radio" name="q36" onclick="check('f36', false, 'උදැල්ල')"> රොටරිය</label>
             </div>
             <div id="f36" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">37. භෝග විසින් සූර්ය ආලෝකය, කාබන්ඩයොක්සයිඩ් (CO2) සහ ජලය (H2O) යොදාගෙන කාබෝහයිඩ්රේට (පිෂ්ඨය) නිපදවන ක්‍රියාවලිය කුමක්ද?</div>
+            <div class="question-text">37. යාන්ත්‍රික ක්‍රම මඟින් විශාල වශයෙන් වැටි තැනීම සඳහා ට්‍රැක්ටරයට සවි කරනු ලබන යන්ත්‍රය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q37" onclick="check('f37', false, 'ප්‍රභාසංස්ලේෂණය')"> ශ්වසනය</label>
-                <label class="option-label"><input type="radio" name="q37" onclick="check('f37', true)"> ප්‍රභාසංස්ලේෂණය (Photosynthesis)</label>
-                <label class="option-label"><input type="radio" name="q37" onclick="check('f37', false, 'ප්‍රභාසංස්ලේෂණය')"> උත්ස්වේදනය</label>
+                <label class="option-label"><input type="radio" name="q37" onclick="check('f37', false, 'වැටි තනන යන්ත්‍ර')"> වල් නාශක ඉසින යන්ත්‍රය</label>
+                <label class="option-label"><input type="radio" name="q37" onclick="check('f37', true)"> වැටි තනන යන්ත්‍ර (Ridge builders)</label>
+                <label class="option-label"><input type="radio" name="q37" onclick="check('f37', false, 'වැටි තනන යන්ත්‍ර')"> අස්වනු නෙළන යන්ත්‍රය</label>
             </div>
             <div id="f37" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">38. පොදු රීතියක් ලෙස, සූර්ය ආලෝකය ප්‍රබල වන විට ප්‍රභාසංස්ලේෂණ ක්‍රියාවලියට සිදුවන්නේ කුමක්ද?</div>
+            <div class="question-text">38. භෝගයක කඳ හෝ වැලෙහි ඇති ඉහළින්ම පවතින දල්ල කපා ඉවත් කිරීමේ ක්‍රියාවලිය hඳුන්වන්නේ කුමන නමකින්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q38" onclick="check('f38', false, 'ප්‍රභාසංස්ලේෂණය වැඩි වේ.')"> ප්‍රභාසංස්ලේෂණය අඩු වේ</label>
-                <label class="option-label"><input type="radio" name="q38" onclick="check('f38', true)"> ප්‍රභාසංස්ලේෂණය වැඩි වේ</label>
-                <label class="option-label"><input type="radio" name="q38" onclick="check('f38', false, 'ප්‍රභාසංස්ලේෂණය වැඩි වේ.')"> කිසිදු වෙනසක් සිදු නොවේ</label>
+                <label class="option-label"><input type="radio" name="q38" onclick="check('f38', false, 'මුදුන් දළු කැපීම')"> පත්‍ර කපා දැමීම</label>
+                <label class="option-label"><input type="radio" name="q38" onclick="check('f38', true)"> මුදුන් දළු කැපීම (Topping / Pinching)</label>
+                <label class="option-label"><input type="radio" name="q38" onclick="check('f38', false, 'මුදුන් දළු කැපීම')"> පැති අංකුර ඉවත් කිරීම</label>
             </div>
             <div id="f38" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">39. වගා බිමක වැටි (Ridges) සෑදීමේ ප්‍රධානතම අරමුණ කුමක්ද?</div>
+            <div class="question-text">39. උසස් තත්ත්වයේ සහ ඒකාකාරී ප්‍රමාණයේ ඵලදාවක් (පළතුරු/එළවළු) ලබා ගැනීම සඳහා දුර්වල හෝ අධික ලෙස පවතින ගෙඩි කඩා ඉවත් කිරීම hඳුන්වන්නේ?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q39" onclick="check('f39', false, 'භෝග වගාවට සුදුසු උස් බිමක් සහ ජලාපවහනය සැකසීම')"> වල් පැළෑටි බෝ කිරීම</label>
-                <label class="option-label"><input type="radio" name="q39" onclick="check('f39', true)"> භෝග වගා කිරීමට සුදුසු උස් ස්ථානයක් සහ ජලාපවහනය නිර්මාණය කිරීම</label>
-                <label class="option-label"><input type="radio" name="q39" onclick="check('f39', false, 'දෙවැන්න නිවැරදියි')"> පසෙහි ජලය රඳවා තබා ගැනීම</label>
+                <label class="option-label"><input type="radio" name="q39" onclick="check('f39', true)"> ගෙඩි කඩා තුනී කිරීම (Thinning fruits)</label>
+                <label class="option-label"><input type="radio" name="q39" onclick="check('f39', false, 'ගෙඩි කඩා තුනී කිරීම')"> පත්‍ර කපා දැමීම</label>
+                <label class="option-label"><input type="radio" name="q39" onclick="check('f39', false, 'ගෙඩි කඩා තුනී කිරීම')"> මුදුන් දළු කැපීම</label>
             </div>
             <div id="f39" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">40. අතින් වැටි සැකසීමේදී බහුලවම භාවිත කරන සාම්ප්‍රදායික ගොවිපල උපකරණය කුමක්ද?</div>
+            <div class="question-text">40. හරිතාගාර වගාවන් තුළ ස්වාභාවික සුළඟ හෝ කෘමීන් නොමැති විට ගෙඩි hටගැනීම සහතික කිරීම සඳහා සිදු කරනු ලබන්නේ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q40" onclick="check('f40', false, 'උදැල්ල')"> නගුල</label>
-                <label class="option-label"><input type="radio" name="q40" onclick="check('f40', true)"> උදැල්ල (Hoe)</label>
-                <label class="option-label"><input type="radio" name="q40" onclick="check('f40', false, 'උදැල්ල')"> රොටරිය</label>
+                <label class="option-label"><input type="radio" name="q40" onclick="check('f40', false, 'කෘතිම පරාගණය')"> කාබන්ඩයොක්සයිඩ් වායුව ඉසීම</label>
+                <label class="option-label"><input type="radio" name="q40" onclick="check('f40', true)"> කෘතිම පරාගණය (Artificial Pollination)</label>
+                <label class="option-label"><input type="radio" name="q40" onclick="check('f40', false, 'කෘතිම පරාගණය')"> වැඩිපුර ජලය සැපයීම</label>
             </div>
             <div id="f40" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">41. යාන්ත්‍රික ක්‍රම මඟින් විශාල වශයෙන් වැටි තැනීම සඳහා ට්‍රැක්ටරයට සවි කරනු ලබන යන්ත්‍රය කුමක්ද?</div>
+            <div class="question-text">41. වල්නාශක (Weedicides) භාවිතයේදී වගා කළ භෝගයන්ට හානි වීම වැළැක්වීම සඳහා අනුගමනය කළ යුතුම මූලික රීතියක් වන්නේ?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q41" onclick="check('f41', false, 'වැටි තනන යන්ත්‍ර')"> වල් නාශක ඉසින යන්ත්‍රය</label>
-                <label class="option-label"><input type="radio" name="q41" onclick="check('f41', true)"> වැටි තනන යන්ත්‍ර (Ridge builders)</label>
-                <label class="option-label"><input type="radio" name="q41" onclick="check('f41', false, 'වැටි තනන යන්ත්‍ර')"> අස්වනු නෙළන යන්ත්‍රය</label>
+                <label class="option-label"><input type="radio" name="q41" onclick="check('f41', true)"> වල්නාශක ඉසීමට භාවිත කරන උපකරණ පළිබෝධනාශක ඉසීමට කිසිවිටෙකත් භාවිත නොකිරීම</label>
+                <label class="option-label"><input type="radio" name="q41" onclick="check('f41', false, 'උපකරණ වෙන් වෙන්ව භාවිතය')"> වල්නාශක වැඩි සාන්ද්‍රණයකින් ඉසීම</label>
+                <label class="option-label"><input type="radio" name="q41" onclick="check('f41', false, 'උපකරණ වෙන් වෙන්ව භාවිතය')"> සුළඟ පවතින දිශාවට ප්‍රතිවිරුද්ධව ඉසීම</label>
             </div>
             <div id="f41" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">42. භෝගයක කඳ හෝ වැලෙහි ඇති ඉහළින්ම පවතින දල්ල කපා ඉවත් කිරීමේ ක්‍රියාවලිය හඳුන්වන්නේ කුමන නමකින්ද?</div>
+            <div class="question-text">42. රසායනික පළිබෝධනාශක ද්‍රව්‍යයක් භාවිත කිරීමට ප්‍රථමයෙන් ගොවිපල සේවකයෙකු අනිවාර්යයෙන්ම කළ යුත්තේ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q42" onclick="check('f42', false, 'මුදුන් දළු කැපීම')"> පත්‍ර කපා ඉවත් කිරීම</label>
-                <label class="option-label"><input type="radio" name="q42" onclick="check('f42', true)"> මුදුන් දළු කැපීම (Topping / Pinching)</label>
-                <label class="option-label"><input type="radio" name="q42" onclick="check('f42', false, 'මුදුන් දළු කැපීම')"> පැති අංකුර ඉවත් කිරීම</label>
+                <label class="option-label"><input type="radio" name="q42" onclick="check('f42', true)"> රසායනික ද්‍රව්‍යයේ බෝතල් ලේබලය (Label) හොඳින් කියවා නීති සහ ආරක්ෂිත ක්‍රමවේද තේරුම් ගැනීම</label>
+                <label class="option-label"><input type="radio" name="q42" onclick="check('f42', false, 'ලේබලය හොඳින් කියවීම')"> පොහොර සමඟ මිශ්‍ර කිරීම</label>
+                <label class="option-label"><input type="radio" name="q42" onclick="check('f42', false, 'ලේබලය හොඳින් කියවීම')"> හිස් දෑතින් දියරය කලතන්න</label>
             </div>
             <div id="f42" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">43. මුදුන් දළු කැපීම (Topping) සිදු කිරීම මඟින් ශාකයට ලැබෙන වාසිය කුමක්ද?</div>
+            <div class="question-text">43. පළිබෝධනාශක හෝ රසායනික ද්‍රව්‍ය ඉසීමේදී තමා ඇඳ සිටින දිගු කලිසමේ වාටිය සහ බූට් සපත්තු (Rubber boots) සකස් කරගත යුත්තේ කෙසේද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q43" onclick="check('f43', false, 'පෝෂ්‍ය පදාර්ථ නිවැරදිව බෙදා හැරීම')"> ශාකය අනවශ්‍ය ලෙස උස යෑම</label>
-                <label class="option-label"><input type="radio" name="q43" onclick="check('f43', true)"> පත්‍ර සහ පලතුරු සඳහා පෝෂ්‍ය පදාර්ථ නිවැරදිව බෙදා හැරීම</label>
-                <label class="option-label"><input type="radio" name="q43" onclick="check('f43', false, 'පෝෂණය බෙදා හැරීම')"> මුල් පද්ධතිය විනාශ වීම</label>
+                <label class="option-label"><input type="radio" name="q43" onclick="check('f43', false, 'Kලිසම් වාටිය බූට් සපත්තුවලට උඩින් වැසෙන සේ තැබීම')"> කලිසම් වාටිය බූට් සපත්තු ඇතුළට දමා</label>
+                <label class="option-label"><input type="radio" name="q43" onclick="check('f43', true)"> කලිසම් වාටිය දිගු බූට් සපත්තු මතුපිටින් (වැසෙන සේ) පිටතට දමා</label>
+                <label class="option-label"><input type="radio" name="q43" onclick="check('f43', false, 'Kලිසම් වාටිය බූට් සපත්තුවලට උඩින් වැසෙන සේ තැබීම')"> කෙටි කලිසම් පමණක් ඇඳ</label>
             </div>
             <div id="f43" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">44. ශාකයේ රෝගී පත්‍ර හෝ අධික ලෙස හටගෙන ඇති පත්‍ර කපා ඉවත් කිරීමේ (Defoliation) ප්‍රධාන වාසියක් වන්නේ:</div>
+            <div class="question-text">44. කෘෂි රසායන ද්‍රව්‍ය ඉසීමේ කටයුතු අවසන් වූ වහාම සෞඛ්‍යාරක්ෂාව උදෙසා අනිවාර්යයෙන්ම කළ යුත්තේ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q44" onclick="check('f44', false, 'යහපත් වායු සංසරණයක් සහ හිරු එළිය ලබා දීම')"> ශාකයට ලැබෙන හිරු එළිය අවහිර වීම</label>
-                <label class="option-label"><input type="radio" name="q44" onclick="check('f44', true)"> යහපත් වායු සංසරණයක් සහ හිරු එළිය වැටීම තහවුරු කිරීම</label>
-                <label class="option-label"><input type="radio" name="q44" onclick="check('f44', false, 'වායු සංසරණය යහපත් කිරීම')"> ශාකයේ උස අඩු කිරීම</label>
+                <label class="option-label"><input type="radio" name="q44" onclick="check('f44', false, 'දෑත් සහ මුඛය හොඳින් සෝදා පිරිසිදු වීම')"> කෙලින්ම විවේකාගාරයට ගොස් නිදාගැනීම</label>
+                <label class="option-label"><input type="radio" name="q44" onclick="check('f44', true)"> දෑත්, මුහුණ සහ උගුර (කට) සබන් යොදා හොඳින් සෝදා පිරිසිදු කර ගැනීම</label>
+                <label class="option-label"><input type="radio" name="q44" onclick="check('f44', false, 'දෑත් සහ මුඛය හොඳින් සෝදා පිරිසිදු වීම')"> එම ඇඳුමින්ම ආහාර අනුභව කිරීම</label>
             </div>
             <div id="f44" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">45. වගාවක අතිරික්ත, විකෘති වූ හෝ පළිබෝධකයන්ගෙන් හානි වූ කුඩා ගෙඩි කඩා තුනී කිරීමේ (Fruit thinning) අරමුණ කුමක්ද?</div>
+            <div class="question-text">45. විෂ සහිත කෘෂි රසායන ද්‍රව්‍ය සහ පළිබෝධනාශක ගොවිපල තුළ ගබඩා කර තැබිය යුතු ආරක්ෂිතම ක්‍රමය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q45" onclick="check('f45', true)"> ඉතිරි ගෙඩි සඳහා පෝෂණය ලබා දී උසස් තත්ත්වයේ විශාල පලතුරු වර්ධනය කිරීම</label>
-                <label class="option-label"><input type="radio" name="q45" onclick="check('f45', false, 'ඉතිරි ගෙඩි වල ප්‍රමාණය සහ ගුණය ඉහළ නැංවීම')"> අස්වැන්න සම්පූර්ණයෙන්ම නැවැත්වීම</label>
-                <label class="option-label"><input type="radio" name="q45" onclick="check('f45', false, 'පළමු වැන්න නිවැරදියි')"> ශාකයේ අතු බිඳ දැමීම</label>
+                <label class="option-label"><input type="radio" name="q45" onclick="check('f45', false, 'වෙන් කර අගුළු දැමූ විශේෂ කුටීරයක')"> සාමාන්‍ය බඩු බාහිරාදිය සමඟ මිශ්‍ර කර</label>
+                <label class="option-label"><input type="radio" name="q45" onclick="check('f45', true)"> භාවිතය පිළිබඳ වාර්තා තබා, වෙනත් ද්‍රව්‍යවලින් වෙන් කර පැහැදිලි සලකුණු යොදා අගුලු දැමූ විශේෂ ගබඩාවක</label>
+                <label class="option-label"><input type="radio" name="q45" onclick="check('f45', false, 'වෙන් කර අගුළු දැමූ විශේෂ කුටීරයක')"> හරිතාගාරය ඇතුළත මේසය උඩ</label>
             </div>
             <div id="f45" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">46. ජල සැපයුම (ජලය දැමීම) කළමනාකරණය කිරීමේදී, උවමනාවට වඩා වැඩිපුර ජලය දැමීමෙන් ශාකයටසිදුවන හානිය කුමක්ද?</div>
+            <div class="question-text">46. කෘෂිකාර්මික යන්ත්‍රෝපකරණයක් (උදා: ට්‍රැක්ටර් හෝ තණකොළ කපන යන්ත්‍ර) භාවිතයට ගැනීමට පෙර සිදු කළ යුතු වැදගත්ම ක්‍රියාව කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q46" onclick="check('f46', false, 'මුල් කුණු වී යාම')"> පත්‍ර වියළී යාම</label>
-                <label class="option-label"><input type="radio" name="q46" onclick="check('f46', true)"> මුල් කුණු වී යාම (Root rot / වාතය හිඟ වීමෙන්)</label>
-                <label class="option-label"><input type="radio" name="q46" onclick="check('f46', false, 'මුල් කුණු වීම')"> කඳ ශක්තිමත් වීම</label>
+                <label class="option-label"><input type="radio" name="q46" onclick="check('f46', true)"> වැඩ ආරම්භ කිරීමට පෙර සිදු කරන දෛනික පරීක්ෂාව (Pre-operational check)</label>
+                <label class="option-label"><input type="radio" name="q46" onclick="check('f46', false, 'වැඩට පෙර කරන පරීක්ෂාව')"> යන්ත්‍රය උපරිම වේගයෙන් පණගැන්වීම</label>
+                <label class="option-label"><input type="radio" name="q46" onclick="check('f46', false, 'වැඩට පෙර කරන පරීක්ෂාව')"> මාසික නඩත්තුව එනතුරු කිසිවක් නොබැලීම</label>
             </div>
             <div id="f46" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">47. බෝගවලට ජලය ඉසීම සඳහා භාවිත වන, ඉහළින් වැස්සක් මෙන් ජලය පතිත කරවන සාමාන්‍ය ක්‍රමය හඳුන්වන්නේ කුමන නමකින්ද?</div>
+            <div class="question-text">47. තණකොළ කපන යන්ත්‍රයක (Brush Cutter) එන්ජිම සීතල තත්ත්වයේ පවතින විට එය පණගැන්වීම (Start) සඳහා 'චෝක් ලීවරය' (Choke Lever) තැබිය යුත්තේ කුමන ස්ථානයකද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q47" onclick="check('f47', false, 'උඩිස් ජල සැපයුම්කරණය')"> බිංදු ජල සම්පාදනය</label>
-                <label class="option-label"><input type="radio" name="q47" onclick="check('f47', true)"> උඩිස් ජල සැපයුම්කරණය (Overhead irrigation)</label>
-                <label class="option-label"><input type="radio" name="q47" onclick="check('f47', false, 'උඩිස් ජල සම්පාදනය')"> පාත්ති ජල සම්පාදනය</label>
+                <label class="option-label"><input type="radio" name="q47" onclick="check('f47', false, 'වසා දැමූ (Close) තත්ත්වයේ')"> විවෘත (Open) තත්ත්වයේ</label>
+                <label class="option-label"><input type="radio" name="q47" onclick="check('f47', true)"> වසා දැමූ (Close) තත්ත්වයේ (වාතය සැපයුම සීමා කිරීමට)</label>
+                <label class="option-label"><input type="radio" name="q47" onclick="check('f47', false, 'වසා දැමූ (Close) තත්ත්වයේ')"> මැද තත්ත්වයේ</label>
             </div>
             <div id="f47" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">48. පසෙහි ආම්ලිකතාවය (pH අගය) සෘජුවම ක්ෂේත්‍රයේදීම මැන ගැනීමට භාවිත කරන සරල උපකරණය කුමක්ද?</div>
+            <div class="question-text">48. තණකොළ කපන යන්ත්‍රයේ එන්ජිම පණගැන්වුණු වහාම (Start වූ වහාම) වසා තිබූ චෝක් ලීවරයට (Choke Lever) කළ යුත්තේ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q48" onclick="check('f48', false, 'ಪಾංශු ආම්ලිකතා මීටරය')"> පාංශු තෙතමනය මීටරය</label>
-                <label class="option-label"><input type="radio" name="q48" onclick="check('f48', true)"> පාංශු ආම්ලිකතා මීටරය (pH meter)</label>
-                <label class="option-label"><input type="radio" name="q48" onclick="check('f48', false, 'pH මීටරය')"> උෂ්ණත්වමානය</label>
+                <label class="option-label"><input type="radio" name="q48" onclick="check('f48', false, 'නැවත විවෘත (Open) තත්ත්වයට පත් කිරීම')"> එලෙසම වසා තැබිය යුතුය</label>
+                <label class="option-label"><input type="radio" name="q48" onclick="check('f48', true)"> නැවත 'විවෘත' (Open) තත්ත්වයට පත් කළ යුතුය (සාමාන්‍ය ධාවනය සඳහා)</label>
+                <label class="option-label"><input type="radio" name="q48" onclick="check('f48', false, 'නැවත විවෘත (Open) තත්ත්වයට පත් කිරීම')"> යන්ත්‍රයෙන් ගලවා දැමිය යුතුය</label>
             </div>
             <div id="f48" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">49. පාංශු ආම්ලිකතා මීටරයක් භාවිතයෙන් අගය මැනීමට ප්‍රථම, ක්ෂේත්‍රයේ පස සකස් කරගත යුත්තේ කෙසේද?</div>
+            <div class="question-text">49. අස්වනු නෙළා ගත් වහාම එළවළු සහ පළතුරුවල උෂ්ණත්වය කඩිනමින් පහත දැමීම සඳහා සිදු කරනු ලබන පූර්ව සිසිලන (Pre-cooling) ක්‍රමවේදයෙහි ප්‍රධාන අභිප්‍රාය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q49" onclick="check('f49', false, 'පස තෙතමනය කළ යුතුය')"> පස සම්පූර්ණයෙන්ම වියළා ගත යුතුය</label>
-                <label class="option-label"><input type="radio" name="q49" onclick="check('f49', true)"> පස මත ජලය ඉස ප්‍රමාණවත් ලෙස තෙතමනය කළ යුතුය</label>
-                <label class="option-label"><input type="radio" name="q49" onclick="check('f49', false, 'ජලය ඉස තෙතමනය කිරීම')"> පස පුළුස්සා ගත යුතුය</label>
+                <label class="option-label"><input type="radio" name="q49" onclick="check('f49', false, 'නැවුම් බව රැක ගැනීමට සහ ශ්වසන වේගය පාලනයට')"> බර ප්‍රමාණය කෘතිමව ඉහළ නැංවීම</label>
+                <label class="option-label"><input type="radio" name="q49" onclick="check('f49', true)"> අස්වැන්නේ නැවුම් බව (Freshness) උපරිමයෙන් සුරක්ෂිත කර තබා ගැනීම</label>
+                <label class="option-label"><input type="radio" name="q49" onclick="check('f49', false, 'නැවුම් බව රැක ගැනීමට සහ ශ්වසන වේගය පාලනයට')"> එළවළුවල පිටත වර්ණය සම්පූර්ණයෙන්ම වෙනස් කිරීම</label>
             </div>
             <div id="f49" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">50. පාංශු ආම්ලිකතා මීටරය පසට ඇතුළු කර නිවැරදි කියවීමක් ලබා ගැනීමට කොපමණ වේලාවක් රැඳී සිටිය යුතුද?</div>
+            <div class="question-text">50. පූර්ව සිසිලන (Pre-cooling) ක්‍රියාවලිය වඩාත් කාර්යක්ෂමව සිදු කිරීම උදෙසා කෘෂිකර්මාන්තයේ බහුලවම යොදාගන්නා උසස් තාක්ෂණික ක්‍රමය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q50" onclick="check('f50', false, 'මිනුම ස්ථාවර වන තෙක් (විනාඩියක් පමණ)')"> තත්පර 5ක් පමණ</label>
-                <label class="option-label"><input type="radio" name="q50" onclick="check('f50', true)"> විනාඩියක් පමණ (කියවීම ස්ථාවර වන තෙක්)</label>
-                <label class="option-label"><input type="radio" name="q50" onclick="check('f50', false, 'විනාඩියක් පමණ')"> පැයක් පමණ</label>
+                <label class="option-label"><input type="radio" name="q50" onclick="check('f50', true)"> රික්තක පූර්ව සිසිලන ක්‍රමය (Vacuum Pre-cooling)</label>
+                <label class="option-label"><input type="radio" name="q50" onclick="check('f50', false, 'රික්තක පූර්ව සිසිලනය')"> සාමාන්‍ය විදුලි පංකා සුළඟින් නිවීම</label>
+                <label class="option-label"><input type="radio" name="q50" onclick="check('f50', false, 'රික්තක පූර්ව සිසිලනය')"> නළ ජලයෙන් සේදීම පමණක් සිදු කිරීම</label>
             </div>
             <div id="f50" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">51. භූමියේ උෂ්ණත්වය ඉහළ යාම මැඩපැවැත්වීම සඳහා භාවිත කරන වසුන් පටල වර්ගය කුමක්ද?</div>
+            <div class="question-text">51. ගොවිපලක වැඩ කටයුතු අවසන් වී ආපසු පැමිණීමේදී, ආරක්ෂාව සම්බන්ධයෙන් අනිවාර්යයෙන්ම කළ යුත්තේ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q51" onclick="check('f51', false, 'කළු සහ සුදු මිශ්‍ර ද්විත්ව ස්ථර පටල')"> විනිවිද පෙනෙන පටල</label>
-                <label class="option-label"><input type="radio" name="q51" onclick="check('f51', true)"> කළු සහ සුදු මිශ්‍ර ද්විත්ව ස්ථර පටල (White & Black film)</label>
-                <label class="option-label"><input type="radio" name="q51" onclick="check('f51', false, 'ද්විත්ව ස්ථර පටල')"> රතු පටල</label>
+                <label class="option-label"><input type="radio" name="q51" onclick="check('f51', true)"> මෙවලම් නිසි තැන්වල තබා, ලිස්සා යාම් හෝ වැටීම් නොවන සේ ප්‍රවේශමෙන් ගමන් කිරීම</label>
+                <label class="option-label"><input type="radio" name="q51" onclick="check('f51', false, 'මෙවලම් නිසි තැන්වල තැබිය යුතුය.')"> උපකරණ කුඹුරේම දමා ඒම</label>
+                <label class="option-label"><input type="radio" name="q51" onclick="check('f51', false, 'පළමුවැන්න නිවැරදියි.')"> කළුවර වැටෙනතුරු කිසිවක් නොකර සිටීම</label>
             </div>
             <div id="f51" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">52. හිරු එළිය පරාවර්තනය කරමින් භූ උෂ්ණත්වය ඉහළ යාම වළක්වන සහ කුඩිත්තන් වැනි කෘමීන් පලවා හරින වසුන් පටල වර්ගය කුමක්ද?</div>
+            <div class="question-text">52. වගා බිම්වල බහුලව භාවිත වන රසායනික පොහොරවල අඩංගු වන ප්‍රධාන පෝෂක මූලද්‍රව්‍ය තුන (පොහොර තුන් කට්ටුව) හඳුන්වන්නේ?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q52" onclick="check('f52', true)"> රිදී පටලය (Silver film)</label>
-                <label class="option-label"><input type="radio" name="q52" onclick="check('f52', false, 'රිදී පටලය')"> විනිවිද පෙනෙන පටල</label>
-                <label class="option-label"><input type="radio" name="q52" onclick="check('f52', false, 'Silver film')"> කළු පටල</label>
+                <label class="option-label"><input type="radio" name="q52" onclick="check('f52', false, 'NPK පෝෂක මූලද්‍රව්‍ය වේ.')"> යකඩ, සින්ක්, කොපර්</label>
+                <label class="option-label"><input type="radio" name="q52" onclick="check('f52', true)"> නයිට්‍රජන් (N), පොස්පරස් (P), පොටෑසියම් (K)</label>
+                <label class="option-label"><input type="radio" name="q52" onclick="check('f52', false, 'NPK')"> කැල්සියම්, මැග්නීසියම්, සල්ෆර්</label>
             </div>
             <div id="f52" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">53. භාවිතයෙන් පසු ඉවත් කිරීමේ ශ්‍රමය ඉතිරි කරවන, ක්ෂුද්‍ර ජීවීන් මඟින් පසටම දිරාපත් වන තුනී පටල වර්ගය කුමක්ද?</div>
+            <div class="question-text">53. ශාකයක පත්‍ර සහ කඳ හොඳින් වර්ධනය වීමට (Vegetative growth) වඩාත්ම දායක වන ප්‍රධාන පෝෂක මූලද්‍රව්‍යය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q53" onclick="check('f53', false, 'ජෛව හායනයට ලක්විය හැකි තුනී පටල')"> පොලිතින් පටල</label>
-                <label class="option-label"><input type="radio" name="q53" onclick="check('f53', true)"> ජෛව හායනයට ලක්විය හැකි තුනී පටල (Biodegradable films)</label>
-                <label class="option-label"><input type="radio" name="q53" onclick="check('f53', false, 'Biodegradable films')"> පී.වී.සී. පටල</label>
+                <label class="option-label"><input type="radio" name="q53" onclick="check('f53', true)"> නයිට්‍රජන් (N)</label>
+                <label class="option-label"><input type="radio" name="q53" onclick="check('f53', false, 'නයිට්‍රජන් (N) පත්‍ර වර්ධනයට උපකාරී වේ.')"> පොස්පරස් (P)</label>
+                <label class="option-label"><input type="radio" name="q53" onclick="check('f53', false, 'නයිට්‍රජන්')"> පොටෑසියම් (K)</label>
             </div>
             <div id="f53" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">54. වගාව සඳහා භාවිත කර ඉවත් කරන ලද කෘෂිකාර්මික තුනී පටල/පොලිතින් කුඹුරේදීම ගිනි තැබීම නීතියෙන් තහනම් කර ඇත්තේ ඇයි?</div>
+            <div class="question-text">54. ශාකයේ මුල් පද්ධතිය ශක්තිමත්ව වර්ධනය වීමට සහ මුල් මුලද්‍රව්‍යයක් ලෙස මුලින්ම අවශ්‍ය වන පෝෂකය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q54" onclick="check('f54', false, 'විෂ වායූන් නිකුත් වන බැවින්')"> පස සාරවත් වන නිසා</label>
-                <label class="option-label"><input type="radio" name="q54" onclick="check('f54', true)"> විෂ වායූන් (Dioxins) ජනනය වීමේ අවදානමක් පවතින බැවින්</label>
-                <label class="option-label"><input type="radio" name="q54" onclick="check('f54', false, 'පරිසර දූෂණය සහ විෂ වායූන් නිසා')"> වැසි ඇතිවිය හැකි නිසා</label>
+                <label class="option-label"><input type="radio" name="q54" onclick="check('f54', false, 'පොස්පරස් මුල් වර්ධනයට උපකාරී වේ.')"> නයිට්‍රජන් (N)</label>
+                <label class="option-label"><input type="radio" name="q54" onclick="check('f54', true)"> පොස්පරස් (P)</label>
+                <label class="option-label"><input type="radio" name="q54" onclick="check('f54', false, 'පොස්පරස්')"> පොටෑසියම් (K)</label>
             </div>
             <div id="f54" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">55. පළිබෝධ පාලනයේදී (Pest Control) අනුගමනය කළ යුතු මූලිකම සහ ප්‍රධානතම සංකල්පය කුමක්ද?</div>
+            <div class="question-text">55. භෝගවල මල් සහ ගෙඩි (පලදාව) හටගැනීම, ගුණාත්මකභාවය සහ ලෙඩ රෝගවලට ඔරොත්තු දීමේ හැකියාව වැඩි කරන්නේ කුමන පෝෂකයෙන්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q55" onclick="check('f55', false, 'පළිබෝධකයන් අඩු වන පරිසරයක් නිර්මාණය කිරීම')"> පළිබෝධකයන් උපරිම වූ පසු වස ඉසීම</label>
-                <label class="option-label"><input type="radio" name="q55" onclick="check('f55', true)"> පළිබෝධකයන් අඩුවෙන් ඇති වන පරිසරයක් කල්තියා නිර්මාණය කිරීම (වැළැක්වීම)</label>
-                <label class="option-label"><input type="radio" name="q55" onclick="check('f55', false, 'කල්තියා වළක්වා ගැනීම')"> රෝගී ශාක සියල්ල පුළුස්සා දැමීම</label>
+                <label class="option-label"><input type="radio" name="q55" onclick="check('f55', false, 'පොටෑසියම් ඵලදාව සහ ශක්තිමත්භාවය වැඩි කරයි.')"> නයිට්‍රජන් (N)</label>
+                <label class="option-label"><input type="radio" name="q55" onclick="check('f55', false, 'පොටෑසියම්')"> පොස්පරස් (P)</label>
+                <label class="option-label"><input type="radio" name="q55" onclick="check('f55', true)"> පොටෑසියම් (K)</label>
             </div>
             <div id="f55" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">56. ශාකවලට වැළඳෙන දිලීර රෝග වැළැක්වීම සහ පාලනය සඳහා භාවිත කරන රසායනික පළිබෝධනාශකය කුමක්ද?</div>
+            <div class="question-text">56. බීජ වැපිරීමට හෝ පැළ සිටුවීමට ප්‍රථමයෙන්, මූලිකවම පසට hොඳින් මිශ්‍ර කරනු ලබන පොහොර වර්ගය hඳුන්වන්නේ?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q56" onclick="check('f56', false, 'දිලීර නාශක')"> කෘමිනාශක</label>
-                <label class="option-label"><input type="radio" name="q56" onclick="check('f56', true)"> දිලීර නාශක (Fungicides)</label>
-                <label class="option-label"><input type="radio" name="q56" onclick="check('f56', false, 'Fungicides')"> වල් නාශක</label>
+                <label class="option-label"><input type="radio" name="q56" onclick="check('f56', true)"> මූලික පොහොර / පදනම් පොහොර (Basal Fertilizer)</label>
+                <label class="option-label"><input type="radio" name="q56" onclick="check('f56', false, 'පදනම් පොහොර සිටුවීමට පෙර යොදයි.')"> අතිරේක පොහොර / මතුපිට පොහොර (Top-dressing)</label>
+                <label class="option-label"><input type="radio" name="q56" onclick="check('f56', false, 'මූලික පොහොර')"> දියර පොහොර</label>
             </div>
             <div id="f56" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">57. වගාවට හානි කරන කෘමීන් වැළැක්වීම සහ පාලනය සඳහා භාවිත කරන රසායනික ද්‍රව්‍යය කුමක්ද?</div>
+            <div class="question-text">57. භෝග වර්ධනය වන කාලය තුළ, එහි වර්ධන අවශ්‍යතා අනුව වරින් වර මතුපිටින් යොදනු ලබන අතිරේක පොහොර hඳුන්වන්නේ?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q57" onclick="check('f57', false, 'කෘමිනාශක')"> වල් නාශක</label>
-                <label class="option-label"><input type="radio" name="q57" onclick="check('f57', true)"> කෘමිනාශක (Insecticides)</label>
-                <label class="option-label"><input type="radio" name="q57" onclick="check('f57', false, 'Insecticides')"> දිලීර නාශක</label>
+                <label class="option-label"><input type="radio" name="q57" onclick="check('f57', false, 'මතුපිට පොහොර වර්ධන කාලයේදී යොදයි.')"> මූලික පොහොර (Basal Fertilizer)</label>
+                <label class="option-label"><input type="radio" name="q57" onclick="check('f57', true)"> මතුපිට පොහොර / අතිරේක පොහොර (Top-dressing)</label>
+                <label class="option-label"><input type="radio" name="q57" onclick="check('f57', false, 'මතුපිට පොහොර')"> කාබනික පොහොර</label>
             </div>
             <div id="f57" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">58. රසායනික පළිබෝධනාශක භාවිතයෙන් තොරව වගා ක්‍රම මඟින් රෝග පාලනය කරන්නේ කෙසේද?</div>
+            <div class="question-text">58. පසෙහි ඇති ආම්ලිකතාවය (Acidic soil) අඩු කර, භෝග වර්ධනයට හිතකර pH අගයක් ලබා ගැනීම සඳහා පසට එකතු කරන්නේ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q58" onclick="check('f58', true)"> රෝග වලට ඔරොත්තු දෙන ප්‍රභේද (ප්‍රතිරෝධී ප්‍රභේද) වගා කිරීම</label>
-                <label class="option-label"><input type="radio" name="q58" onclick="check('f58', false, 'ප්‍රතිරෝධී ප්‍රභේද භාවිතය')"> පොහොර නොදමා සිටීම</label>
-                <label class="option-label"><input type="radio" name="q58" onclick="check('f58', false, 'වැරදියි')"> ජලය අධිකව සැපයීම</label>
+                <label class="option-label"><input type="radio" name="q58" onclick="check('f58', true)"> හුණු ද්‍රව්‍ය / fඩොලමයිට් (Lime / Calcium Carbonate)</label>
+                <label class="option-label"><input type="radio" name="q58" onclick="check('f58', false, 'හුණු ද්‍රව්‍ය ආම්ලිකතාවය නැති කරයි.')"> යූරියා පොහොර</label>
+                <label class="option-label"><input type="radio" name="q58" onclick="check('f58', false, 'හුණු ද්‍රව්‍ය')"> සල්ෆර් කුඩු</label>
             </div>
             <div id="f58" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">59. වී වගාවේදී බහුලවම දැකිය හැකි කොළ සහ කරල් වලට හානි කරන ප්‍රධාන දිලීර රෝගයක් වන්නේ:</div>
+            <div class="question-text">59. කොම්පෝස්ට් (Compost) සහ සත්ව පොහොර වැනි කාබනික පොහොර පසට hොඳින් මිශ්‍ර කිරීමෙන් සිදුවන ප්‍රධානම වාසිය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q59" onclick="check('f59', false, 'වී කොළ අංගමාරය / පිපිරුම')"> මුල් කුණුවීම</label>
-                <label class="option-label"><input type="radio" name="q59" onclick="check('f59', true)"> වී ඇට පිපිරුම / කොළ අංගමාරය (Rice blast)</label>
-                <label class="option-label"><input type="radio" name="q59" onclick="check('f59', false, 'Rice blast')"> පිටි පුස් රෝගය</label>
+                <label class="option-label"><input type="radio" name="q59" onclick="check('f59', false, 'කාබනික පොහොර පසෙහි ව්‍යුහය සහ ජල රඳවා ගැනීම දියුණු කරයි.')"> පසෙහි ආම්ලිකතාවය උපරිමයෙන් වැඩි වීම</label>
+                <label class="option-label"><input type="radio" name="q59" onclick="check('f59', true)"> පසෙහි භෞතික ව්‍යුහය, වාතාශ්‍රය සහ ජලය රඳවා ගැනීමේ හැකියාව වර්ධනය වීම</label>
+                <label class="option-label"><input type="radio" name="q59" onclick="check('f59', false, 'දෙවැන්න නිවැරදියි')"> වල් පැළෑටි බීජ සම්පූර්ණයෙන් විනාශ වීම</label>
             </div>
             <div id="f59" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">60. වී කරල් සහ කොළ යුෂ උරා බොමින් සහල් නිසරු කරන, කුඹුරුවල බහුලව වසන කෘමි පළිබෝධකයා කවුද?</div>
+            <div class="question-text">60. බීජයකින් මුලින්ම මූලික මුල (Radicle) සහ ප්‍රධාන අංකුරය (Plumule) පිටතට පැමිණ නව පැළයක් බිහිවීමේ ස්වභාවික ක්‍රියාවලිය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q60" onclick="check('f60', true)"> දුගඳ කෘමියා (Stink bug / ගොයම් මැස්සා වැනි)</label>
-                <label class="option-label"><input type="radio" name="q60" onclick="check('f60', false, 'දුගඳ කෘමියා')"> ගැඩවිලා</label>
-                <label class="option-label"><input type="radio" name="q60" onclick="check('f60', false, 'Stink bug')"> මීයන්</label>
+                <label class="option-label"><input type="radio" name="q60" onclick="check('f60', true)"> බීජ ප්‍රරෝහණය (Seed Germination)</label>
+                <label class="option-label"><input type="radio" name="q60" onclick="check('f60', false, 'බීජ ප්‍රරෝහණය')"> ප්‍රභාසංස්ලේෂණය</label>
+                <label class="option-label"><input type="radio" name="q60" onclick="check('f60', false, 'බීජ ප්‍රරෝහණය')"> උත්ස්වේදනය</label>
             </div>
             <div id="f60" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">61. යාන්ත්‍රික පැළ සිටුවීමේ යන්ත්‍ර මඟින් සාමාන්‍යයෙන් පේළි අතර පරතරය (Row spacing) කොපමණ දුරකින් තබයිද?</div>
+            <div class="question-text">61. බීජයක් සාර්ථකව ප්‍රරෝහණය වීම (Germinate වීම) සඳහා අත්‍යවශ්‍ය වන මූලික බාහිර සාධක 3 කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q61" onclick="check('f61', false, '30cm පමණ')"> 10cm</label>
-                <label class="option-label"><input type="radio" name="q61" onclick="check('f61', true)"> 30cm පමණ (ජපානයේ සම්මතය)</label>
-                <label class="option-label"><input type="radio" name="q61" onclick="check('f61', false, '30cm')"> 50cm</label>
+                <label class="option-label"><input type="radio" name="q61" onclick="check('f61', false, 'ජලය, වාතය (ඔක්සිජන්) සහ සුදුසු උෂ්ණත්වය අත්‍යවශ්‍ය වේ.')"> ආලෝකය, පස, පොහොර</label>
+                <label class="option-label"><input type="radio" name="q61" onclick="check('f61', true)"> ජලය (තෙතමනය), වාතය (ඔක්සිජන්), සුදුසු උෂ්ණත්වය</label>
+                <label class="option-label"><input type="radio" name="q61" onclick="check('f61', false, 'දෙවැන්න නිවැරදියි')"> කාබන්ඩයොක්සයිඩ්, නයිට්‍රජන්, පස</label>
             </div>
             <div id="f61" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">62. පැළ සිටුවීමේ යන්ත්‍ර මඟින් සාමාන්‍යයෙන් පැළ පඳුරු අතර පරතරය (Hill spacing) සකසන්නේ කුමන පරාසයකද?</div>
+            <div class="question-text">62. පැළ තවානක (Nursery) අධික ලෙස ළඟින් වැවී ඇති දුර්වල පැළ hඳුනාගෙන, නියමිත පරතරය තබා ගැනීම සඳහා සමහර පැළ ගලවා ඉවත් කිරීමේ වගා සත්කාරය?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q62" onclick="check('f62', true)"> 10 සිට 30cm</label>
-                <label class="option-label"><input type="radio" name="q62" onclick="check('f62', false, '10-30cm')"> 40 සිට 60cm</label>
-                <label class="option-label"><input type="radio" name="q62" onclick="check('f62', false, 'වැරදියි')"> 5cm ට වඩා අඩුවෙන්</label>
+                <label class="option-label"><input type="radio" name="q62" onclick="check('f62', true)"> තුනී කිරීම (Thinning out / පැළ අඩු කිරීම)</label>
+                <label class="option-label"><input type="radio" name="q62" onclick="check('f62', false, 'තුනී කිරීම මඟින් පැළවලට ඉඩ සහ ආලෝකය ලැබේ.')"> මුදුන් දළු කැපීම</label>
+                <label class="option-label"><input type="radio" name="q62" onclick="check('f62', false, 'තුනී කිරීම')"> බෝග මාරුව</label>
             </div>
             <div id="f62" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">63. කුඹුරේ පැළ සිටුවීමෙන් පසු, බීජ පැළ ආරක්ෂා කරගැනීම සඳහා සිදුකරන ජල කළමනාකරණ ක්‍රියාවලිය හඳුන්වන්නේ:</div>
+            <div class="question-text">63. තවානක ඇති පැළ ස්ථිර වගා බිමේ සිටුවීමට සති එකකට හෝ දෙකකට පෙර, ස්වාභාවික රළු පරිසරයට ඔරොත්තු දීම සඳහා ජලය සැපයීම අඩු කර හිරු එළියට නිරාවරණය කිරීමේ ක්‍රියාවලිය?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q63" onclick="check('f63', false, 'ජල කළමනාකරණය / හැරවීම')"> ජලය බැසයාම</label>
-                <label class="option-label"><input type="radio" name="q63" onclick="check('f63', true)"> ජලය හැරවීම (Water management / Flooding)</label>
-                <label class="option-label"><input type="radio" name="q63" onclick="check('f63', false, 'ජල පාලනය')"> අන්තර් වියලනය</label>
+                <label class="option-label"><input type="radio" name="q63" onclick="check('f63', false, 'පැළ දැඩි කිරීම (Hardening) ලෙස හඳුන්වයි.')"> පැළ සිටුවීම</label>
+                <label class="option-label"><input type="radio" name="q63" onclick="check('f63', true)"> පැළ දැඩි කිරීම (Hardening)</label>
+                <label class="option-label"><input type="radio" name="q63" onclick="check('f63', false, 'පැළ දැඩි කිරීම')"> පූර්ව సిසිලනය</label>
             </div>
             <div id="f63" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">64. වී ශාකයේ නව මුල් සහ කොළ ඇවිත් නව කඳන් බෙදීම (Tillering) උත්තේජනය කිරීම සඳහා යොදන ජල මට්ටම කෙබඳු විය යුතුද?</div>
+            <div class="question-text">64. වගා බිමෙහි පස මතුපිට පිදුරු, වියළි කොළ හෝ ප්ලාස්ටික් ශීට් (Plastic Mulch) යොදා වසා තැබීමේ 'පස වැසීමේ සත්කාරය' (Mulching) මඟින් ලැබෙන ප්‍රධානතම ප්‍රයෝජනය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q64" onclick="check('f64', false, 'නොගැඹුරු ජලය')"> ගැඹුරු ජලය</label>
-                <label class="option-label"><input type="radio" name="q64" onclick="check('f64', true)"> නොගැඹුරු ජලය (Shallow water - 2-3cm පමණ)</label>
-                <label class="option-label"><input type="radio" name="q64" onclick="check('f64', false, 'නොගැඹුරු ජල මට්ටම')"> ජලය සම්පූර්ණයෙන්ම හිඳවීම</label>
+                <label class="option-label"><input type="radio" name="q64" onclick="check('f64', true)"> පසෙහි තෙතමනය රැක ගැනීම සහ වල් පැළෑටි මර්දනය කිරීම</label>
+                <label class="option-label"><input type="radio" name="q64" onclick="check('f64', false, 'Mulching මඟින් තෙතමනය රැකෙන අතර වල් පැළෑටි පාලනය වේ.')"> පසෙහි උෂ්ණත්වය උපරිමයෙන් අඩු කිරීම පමණි</label>
+                <label class="option-label"><input type="radio" name="q64" onclick="check('f64', false, 'පළමුවැන්න නිවැරදියි')"> පසෙහි මැටි ප්‍රමාණය වැඩි කිරීම</label>
             </div>
             <div id="f64" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">65. වී වර්ධන අවධියේදී පස වාතාශ්‍රය කිරීමට සහ මුල් ශක්තිමත් කිරීමට කලකට කුඹුරෙන් ජලය ඉවත් කර වියළීමට හැරීම (Mid-season drainage) හඳුන්වන්නේ:</div>
+            <div class="question-text">65. භෝග වගාවකට හානි පමුණුවන කෘමීන්, රෝග සහ වල් පැළෑටි රසායනික, යාන්ත්‍රික සහ ජීව විද්‍යාත්මක ක්‍රම සියල්ලම ඒකාබද්ධ කර මර්දනය කිරීමේ නවීන සංකල්පය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q65" onclick="check('f65', false, 'අන්තර් වියලනය')"> ජල සැපයුම</label>
-                <label class="option-label"><input type="radio" name="q65" onclick="check('f65', true)"> අන්තර් වියලනය (Mid-season drainage / නකබොෂි)</label>
-                <label class="option-label"><input type="radio" name="q65" onclick="check('f65', false, 'නකබොෂි ක්‍රමය')"> වල් නාශක ඉසීම</label>
+                <label class="option-label"><input type="radio" name="q65" onclick="check('f65', false, 'ඒකාබද්ධ පළිබෝධ කළමනාකරණය (IPM)')"> රසායනික මර්දනය පමණක් භාවිතය</label>
+                <label class="option-label"><input type="radio" name="q65" onclick="check('f65', true)"> ඒකාබද්ධ පළිබෝධ කළමනාකරණය (IPM - Integrated Pest Management)</label>
+                <label class="option-label"><input type="radio" name="q65" onclick="check('f65', false, 'IPM සංකල්පයයි')"> වල්නාශක පමණක් ඉසීම</label>
             </div>
             <div id="f65" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">66. වී වගාවේදී වල් පැළෑටි මර්දනය සඳහා පැළ සිටුවීමෙන් පසු ඉසිනු ලබන රසායනික ද්‍රව්‍ය වර්ගය කුමක්ද?</div>
+            <div class="question-text">66. ශාක පත්‍රවල පිටුපස යුෂ උරා බොමින්, වෛරස් රෝග (Virus diseases) එක් භෝගයකින් තවකෙකට බෝ කිරීමට දායක වන කුඩා කෘමි පළිබෝධකයා කවුද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q66" onclick="check('f66', false, 'වල් නාශක')"> කෘමිනාශක</label>
-                <label class="option-label"><input type="radio" name="q66" onclick="check('f66', true)"> වල් නාශක (Herbicides / Weedicides)</label>
-                <label class="option-label"><input type="radio" name="q66" onclick="check('f66', false, 'Herbicides')"> දිලීර නාශක</label>
+                <label class="option-label"><input type="radio" name="q66" onclick="check('f66', true)"> කුඩිත්තන් / පෑනන් (Aphids)</label>
+                <label class="option-label"><input type="radio" name="q66" onclick="check('f66', false, 'කුඩිත්තන් වෛරස් රෝග පතුරුවන වාහකයෙකි.')"> ගොළුබෙල්ලන්</label>
+                <label class="option-label"><input type="radio" name="q66" onclick="check('f66', false, 'කුඩිත්තන්')"> කූඩැල්ලන්</label>
             </div>
             <div id="f66" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">67. වී කරල්/බණ්ඩි එළියට ඒමට දින 15 සිට 25 කට පමණ පෙර, සපුෂ්ප ශාකවල වර්ධනය වැඩි කිරීමට යොදන පොහොර වර්ගය කුමක්ද?</div>
+            <div class="question-text">67. දිලීර (Fungi) මඟින් භෝගවලට වැළඳෙන රෝග පාලනය කිරීම සඳහා භාවිත කරනු ලබන විශේෂිත රසායනික ද්‍රව්‍ය වර්ගය හඳුන්වන්නේ?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q67" onclick="check('f67', false, 'බණ්ඩි/කරල් පොහොර')"> මුල් පොහොර</label>
-                <label class="option-label"><input type="radio" name="q67" onclick="check('f67', true)"> බණ්ඩි/කරල් පොහොර (Ear fertilizer / හෝගොඒ)</label>
-                <label class="option-label"><input type="radio" name="q67" onclick="check('f67', false, 'Ear fertilizer')"> සරත් ඍතු පොහොර</label>
+                <label class="option-label"><input type="radio" name="q67" onclick="check('f67', false, 'දිලීර නාශක (Fungicides) භාවිත කළ යුතුය.')"> වල්නාශක (Weedicides)</label>
+                <label class="option-label"><input type="radio" name="q67" onclick="check('f67', false, 'දිලීර නාශක')"> කෘමිනාශක (Insecticides)</label>
+                <label class="option-label"><input type="radio" name="q67" onclick="check('f67', true)"> දිලීරනාශක (Fungicides)</label>
             </div>
             <div id="f67" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">68. බණ්ඩි පොහොරවල අඩංගු ප්‍රධාන පෝෂණ මූලද්‍රව්‍ය දෙක කුමක්ද?</div>
+            <div class="question-text">68. හරිතාගාර තුළ වගා කර ඇති භෝගවලට නල මාර්ග මඟින් බිංදු වශයෙන් සෙමින් මුල් අසලටම ජලය සපයන වඩාත් ජල-කාර්යක්ෂම ක්‍රමය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q68" onclick="check('f68', false, 'නයිට්‍රජන් සහ පොටෑසියම්')"> කැල්සියම් සහ මැග්නීසියම්</label>
-                <label class="option-label"><input type="radio" name="q68" onclick="check('f68', true)"> නයිට්‍රජන් (N) සහ පොටෑසියම් (K)</label>
-                <label class="option-label"><input type="radio" name="q68" onclick="check('f68', false, 'N සහ K')"> පීට් සහ බොරළු</label>
+                <label class="option-label"><input type="radio" name="q68" onclick="check('f68', true)"> බිංදු ජල සම්පාදනය (Drip Irrigation)</label>
+                <label class="option-label"><input type="radio" name="q68" onclick="check('f68', false, 'Drip Irrigation මඟින් ජලය අපතේ යාම අවම වේ.')"> ඉසින ජල සම්පාදනය (Sprinkler)</label>
+                <label class="option-label"><input type="radio" name="q68" onclick="check('f68', false, 'බිංදු ජල සම්පාදනය')"> ගංවතුර ක්‍රමයට ජලය දැමීම</label>
             </div>
             <div id="f68" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">69. වී වගාවේ ළදරු බණ්ඩි/කරල් අවකලනය සිදු වී දින කීයකින් පමණ කරල් එළියට ඒම (Heading) සිදු වේද?</div>
+            <div class="question-text">69. භෝගවල අස්වනු නෙළීමෙන් පසු, පරිභෝජනයට සුදුසු පරිදි ගබඩා කිරීමට හෝ වෙළඳපොළට යැවීමට ප්‍රථමයෙන් ගොයම් ඇට මඟින් වී වෙන් කරගැනීමේ යාන්ත්‍රික ක්‍රියාවලිය?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q69" onclick="check('f69', false, 'දින 30කින් පමණ')"> දින 5කින්</label>
-                <label class="option-label"><input type="radio" name="q69" onclick="check('f69', true)"> දින 30කින් පමණ (Heading stage)</label>
-                <label class="option-label"><input type="radio" name="q69" onclick="check('f69', false, 'දින 30')"> දින 90කින්</label>
+                <label class="option-label"><input type="radio" name="q69" onclick="check('f69', false, 'ගොයම් පෑගීම / වී කෙටීම (Threshing) වේ.')"> වී මෝල් කිරීම</label>
+                <label class="option-label"><input type="radio" name="q69" onclick="check('f69', true)"> ගොයම් පෑගීම / ඇට වෙන් කිරීම (Threshing)</label>
+                <label class="option-label"><input type="radio" name="q69" onclick="check('f69', false, 'ගොයම් පෑගීම')"> පූර්ව සිසිලනය</label>
             </div>
             <div id="f69" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">70. කරල් එළියට ඒම සිදු වූ දින සිට දින කීයක් ගතවන විට අස්වනු නෙලීමේ කාලය එළඹේද?</div>
+            <div class="question-text">70. ගොවිපලක සේවය කරන විට ඕනෑම හදිසි අනතුරක් වළක්වා ගැනීම සඳහා පැළඳිය යුතු අනිවාර්ය ආරක්ෂක උපකරණ (PPE) hඳුන්වන්නේ කුමන නමකින්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q70" onclick="check('f70', false, 'දින 30-60 ත් අතර')"> දින 10 සිට 15</label>
-                <label class="option-label"><input type="radio" name="q70" onclick="check('f70', true)"> දින 30 සිට 60 දක්වා කාලය තුළ (භෝගය අනුව)</label>
-                <label class="option-label"><input type="radio" name="q70" onclick="check('f70', false, 'දින 30 සිට 60 දක්වා')"> දින 100කට පසු</label>
+                <label class="option-label"><input type="radio" name="q70" onclick="check('f70', true)"> පුද්ගලික ආරක්ෂක උපකරණ (Personal Protective Equipment)</label>
+                <label class="option-label"><input type="radio" name="q70" onclick="check('f70', false, 'PPE ලෙස හැඳින්වේ.')"> පොදු මෙවලම් පෙට්ටිය</label>
+                <label class="option-label"><input type="radio" name="q70" onclick="check('f70', false, 'පුද්ගලික ආරක්ෂක උපකරණ')"> යාන්ත්‍රික මෙවලම්</label>
             </div>
             <div id="f70" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">71. ජපානයේ වී අස්වනු නෙලීම සහ ගොයම් පෑගීම යන කාර්යයන් දෙකම එකවර සිදු කරන ඒකාබද්ධ යන්ත්‍රය හඳුන්වන්නේ කුමන නමකින්ද?</div>
+            <div class="question-text">71. උස් ස්ථානවල (උදා: ගස්වල හෝ හරිතාගාර වහලය මත) වැඩ කරන විට වැටීමෙන් සිදුවන අනතුරු වළක්වා ගැනීමට පැළඳිය යුතුම උපකරණය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q71" onclick="check('f71', false, 'කොම්බයින් අස්වනු නෙළන යන්ත්‍රය')"> ට්‍රැක්ටරය</label>
-                <label class="option-label"><input type="radio" name="q71" onclick="check('f71', true)"> කොම්බයින් අස්වනු නෙළන යන්ත්‍රය (Combine harvester)</label>
-                <label class="option-label"><input type="radio" name="q71" onclick="check('f71', false, 'Combine harvester')"> රොටරිය</label>
+                <label class="option-label"><input type="radio" name="q71" onclick="check('f71', false, 'ආරක්ෂිත පටිය (Safety harness) පැළඳිය යුතුය.')"> රබර් බූට් සපත්තු</label>
+                <label class="option-label"><input type="radio" name="q71" onclick="check('f71', true)"> ආරක්ෂිත පටිය / ජීවිත ආරක්ෂක ලණුව (Safety harness / Safety belt)</label>
+                <label class="option-label"><input type="radio" name="q71" onclick="check('f71', false, 'ආරක්ෂිත පටිය')"> සම් අත්වැසුම්</label>
             </div>
             <div id="f71" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">72. අස්වැන්න නෙළන අවස්ථාවේදී වී වල තෙතමනය 20 - 27% අතර පවතී. එය ගබඩා කිරීමට පෙර තාපය යොදා වියළා තෙතමනය කුමන මට්ටමකට අඩු කළ යුතුද?</div>
+            <div class="question-text">72. ට්‍රැක්ටරයක් පදවන විට හෝ එය ක්‍රියාත්මක වෙමින් පවතින විට, ආරක්ෂාව සඳහා රියදුරු අනිවාර්යයෙන්ම කල යුත්තේ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q72" onclick="check('f72', false, '14% සිට 15% දක්වා')"> 5% දක්වා</label>
-                <label class="option-label"><input type="radio" name="q72" onclick="check('f72', true)"> 14% සිට 15% දක්වා (ආරක්ෂිතව තබා ගැනීමට)</label>
-                <label class="option-label"><input type="radio" name="q72" onclick="check('f72', false, '14-15%')"> 40% දක්වා</label>
+                <label class="option-label"><input type="radio" name="q72" onclick="check('f72', true)"> ආරක්ෂිත පටිය (Seatbelt) පැළඳීම සහ ROPS (ආරක්ෂිත රාමුව) නිසි ලෙස තබා ගැනීම</label>
+                <label class="option-label"><input type="radio" name="q72" onclick="check('f72', false, 'Seatbelt එක අනිවාර්ය වේ.')"> ට්‍රැක්ටරයෙන් පිටතට නැමී බැලීම</label>
+                <label class="option-label"><input type="radio" name="q72" onclick="check('f72', false, 'පළමුවැන්න නිවැරදියි')"> එන්ජිම උපරිම වේගයෙන් ධාවනය කිරීම පමණි</label>
             </div>
             <div id="f72" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">73. වී වේලීමෙන් පසු, එහි පොත්ත ඉවත් කර සකස් කරගන්නා සහල් වර්ගය කුමක්ද?</div>
+            <div class="question-text">73. ගොවිපලක 5S සංකල්පය ක්‍රියාත්මක කිරීමේදී 'Seiri' (වෙන් කිරීම/Seiri) යන්නෙන් අදහස් කරන්නේ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q73" onclick="check('f73', false, 'දුඹුරු සහල්')"> තම්බපු සහල්</label>
-                <label class="option-label"><input type="radio" name="q73" onclick="check('f73', true)"> දුඹුරු සහල් (Brown rice / ගෙන්මායි)</label>
-                <label class="option-label"><input type="radio" name="q73" onclick="check('f73', false, 'Brown rice')"> සුදු සහල්</label>
+                <label class="option-label"><input type="radio" name="q73" onclick="check('f73', true)"> අවශ්‍ය දේ සහ අනවශ්‍ය දේ වෙන් කර අනවශ්‍ය දෑ ඉවත් කිරීම</label>
+                <label class="option-label"><input type="radio" name="q73" onclick="check('f73', false, 'Seiri යනු අනවශ්‍ය දේ ඉවත් කිරීමයි.')"> උපකරණ ලස්සනට අடுக்கා තැබීම</label>
+                <label class="option-label"><input type="radio" name="q73" onclick="check('f73', false, 'අනවශ්‍ය දේ වෙන් කර ඉවත් කිරීම')"> හැමතැනම පිරිසිදු කිරීම</label>
             </div>
             <div id="f73" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">74. සාමාන්‍යයෙන් දුඹුරු සහල් නැව්ගත කිරීම සඳහා භාවිත කරන සම්මත උරයක (Rice bag) බර කොපමණද?</div>
+            <div class="question-text">74. 5S සංකල්පයට අනුව 'Seiton' (පිළිවෙළකට සැකසීම/Seiton) යන්නෙහි ප්‍රධාන අරමුණ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q74" onclick="check('f74', false, '30kg')"> 10kg</label>
-                <label class="option-label"><input type="radio" name="q74" onclick="check('f74', true)"> 30kg (ජපානයේ සම්මත මිනුම)</label>
-                <label class="option-label"><input type="radio" name="q74" onclick="check('f74', false, '30 කිලෝග්‍රෑම්')"> 50kg</label>
+                <label class="option-label"><input type="radio" name="q74" onclick="check('f74', false, 'Seiton යනු ඕනෑම උපකරණයක් ඕනෑම අයෙකුට පහසුවෙන් ගත හැකි සේ සැකසීමයි.')"> දූවිලි පිසදා පිරිසිදු කිරීම</label>
+                <label class="option-label"><input type="radio" name="q74" onclick="check('f74', true)"> අවශ්‍ය මෙවලම් ඕනෑම අයෙකුට වහාම ගත හැකි වන සේ නියමිත ස්ථානයක පිළිවෙළකට තැබීම</label>
+                <label class="option-label"><input type="radio" name="q74" onclick="check('f74', false, 'පිළිවෙළකට තැබීම')"> නීති රීති ලියා ප්‍රදර්ශනය කිරීම</label>
             </div>
             <div id="f74" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">75. අස්වනු නෙලීමෙන් පසු පිදුරු, ඉපනැැලි සහ වල් පැළෑටි පසට යට කරමින් කුඹුර සී සෑම සඳහා භාවිත කරන උපකරණය කුමක්ද?</div>
+            <div class="question-text">75. 5S සංකල්පයේ 'Seiso' (පිරිසිදු කිරීම/Seiso) යන්නෙන් අදහස් කරන්නේ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q75" onclick="check('f75', true)"> ට්‍රැක්ටරය (රොටරි නගුල සවිකළ)</label>
-                <label class="option-label"><input type="radio" name="q75" onclick="check('f75', false, 'ට්‍රැක්ටරය')"> ධාන්‍ය වියළන යන්ත්‍රය</label>
-                <label class="option-label"><input type="radio" name="q75" onclick="check('f75', false, 'Rotary tiller')"> පැළ සිටුවන යන්ත්‍රය</label>
+                <label class="option-label"><input type="radio" name="q75" onclick="check('f75', true)"> වැඩබිම සහ යන්ත්‍රෝපකරණ නිරන්තරයෙන් පිරිසිදු කර නඩත්තු කිරීම</label>
+                <label class="option-label"><input type="radio" name="q75" onclick="check('f75', false, 'Seiso යනු පිරිසිදු කිරීම මෙන්ම පරීක්ෂා කිරීමයි.')"> ඇඳුම් පිරිසිදුව තබා ගැනීම පමණි</label>
+                <label class="option-label"><input type="radio" name="q75" onclick="check('f75', false, 'පිරිසිදු කිරීම')"> බඩු බාහිරාදිය විකිණීම</label>
             </div>
             <div id="f75" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">76. සාම්ප්‍රදායිකව පැළ සිටුවන්නේ නැතිව, කුඹුරට කෙලින්ම බීජ වපුරමින් ශ්‍රම කාලය සහ පිරිවැය ඉතිරි කරගන්නා වගා ක්‍රමය කුමක්ද?</div>
+            <div class="question-text">76. ජපානයේ කෘෂිකාර්මික ක්ෂේත්‍රයේ බහුලව භාවිත වන 'KYT' (Hazard Prediction Training) සංකල්පයේ ප්‍රධාන පරමාර්ථය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q76" onclick="check('f76', false, 'සෘජු වැපිරීම')"> විරල රෝපණය</label>
-                <label class="option-label"><input type="radio" name="q76" onclick="check('f76', true)"> සෘජු වැපිරීම (Direct seeding)</label>
-                <label class="option-label"><input type="radio" name="q76" onclick="check('f76', false, 'Direct seeding')"> හරිතාගාර වගාව</label>
+                <label class="option-label"><input type="radio" name="q76" onclick="check('f76', false, 'KYT යනු අනතුරු කලින් හඳුනාගෙන ඒවා වළක්වා ගැනීමට පුහුණු වීමයි.')"> අස්වැන්න වැඩි කරන ක්‍රම සෙවීම</label>
+                <label class="option-label"><input type="radio" name="q76" onclick="check('f76', true)"> වැඩබිම තුළ සිදුවිය හැකි අනතුරු/ආපදා කලින් hඳුනාගෙන ඒවා වළක්වා ගැනීමට පුහුණු වීම</label>
+                <label class="option-label"><input type="radio" name="q76" onclick="check('f76', false, 'අනතුරු කලින් හඳුනා ගැනීම')"> ජපන් භාෂාව ඉගෙනීම පමණක්</label>
             </div>
             <div id="f76" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">77. ජලයෙන් යටවූ කුඹුරක සෘජු වැපිරීමේදී බීජවල ප්‍රරෝහණය වැඩි දියුණු කිරීමට (ඔක්සිජන් ලබා දීමට) බීජ මත ආලේප කරන්නේ කුමක්ද?</div>
+            <div class="question-text">77. ගොවිපලක සේවය කරන අතරතුර ඔබට hදිසියේම සුළු අනතුරක් හෝ තුවාල වීමක් සිදු වුවහොත් මුලින්ම කළ යුත්තේ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q77" onclick="check('f77', false, 'කැල්සියම් පෙරොක්සයිඩ් හෝ යකඩ')"> රසායනික පොහොර</label>
-                <label class="option-label"><input type="radio" name="q77" onclick="check('f77', true)"> කැල්සියම් පෙරොක්සයිඩ් (Calper) හෝ යකඩ කුඩු</label>
-                <label class="option-label"><input type="radio" name="q77" onclick="check('f77', false, 'කැල්පර් හෝ යකඩ')"> මැටි සහ වැලි</label>
+                <label class="option-label"><input type="radio" name="q77" onclick="check('f77', true)"> වහාම කාර්යභාර නිලධාරියාට (Supervisor) ඒ පිළිබඳව වාර්තා කර ප්‍රථමාධාර ලබා ගැනීම</label>
+                <label class="option-label"><input type="radio" name="q77" onclick="check('f77', false, 'ඕනෑම අනතුරක් වහාම දැනුම් දිය යුතුය.')"> කිසිවෙකුට නොකියා දිගටම වැඩ කිරීම</label>
+                <label class="option-label"><input type="radio" name="q77" onclick="check('f77', false, 'සුපවයිසර්ට දැනුම් දීම')"> සේවා මුරය අවසන් වනතුරු බලා සිටීම</label>
             </div>
             <div id="f77" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">78. පැළ සිටවන යන්ත්‍රයේ පැළ අතර ඉඩ වැඩි කරමින්, රෝපණ ඝනත්වය අඩු කර බීජ පෙට්ටි ගණන 40% කින් පමණ අඩු කරගන්නා ක්‍රමය කුමක්ද?</div>
+            <div class="question-text">78. උණුසුම් කාලගුණය පවතින ගිම්හාන සෘතුවේදී (Summer) එළිමහනේ වැඩ කරන විට 'HI-stroke' (Heat stroke / අධික උෂ්ණත්ව ආඝාතය) වළක්වා ගැනීමට ගත යුතු පියවර කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q78" onclick="check('f78', false, 'විරල රෝපණ වගාව')"> සෘජු වැපිරීම</label>
-                <label class="option-label"><input type="radio" name="q78" onclick="check('f78', true)"> විරල රෝපණ වගාව (Sparse planting / සොබකු)</label>
-                <label class="option-label"><input type="radio" name="q78" onclick="check('f78', false, 'සොබකු ක්‍රමය')"> බහු වාර්ෂික වගාව</label>
+                <label class="option-label"><input type="radio" name="q78" onclick="check('f78', false, 'වරින් වර විවේකය, ජලය සහ ලුණු/ඛනිජ ලවණ ලබාගත යුතුය.')"> දිගටම විවේකයක් නොමැතිව වැඩ කිරීම</label>
+                <label class="option-label"><input type="radio" name="q78" onclick="check('f78', true)"> වරින් වර සෙවණ ඇති ස්ථානවල විවේක ගැනීම සහ නිතර ජලය හා ලුණු/ඛනිජ ලවණ පානය කිරීම</label>
+                <label class="option-label"><input type="radio" name="q78" onclick="check('f78', false, 'වරින් වර විවේකය සහ ජලය ලබා ගැනීම')"> ඝන ලොම් ඇඳුම් ඇඳීම</label>
             </div>
             <div id="f78" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">79. පශු සම්පත් පෝෂණය සඳහා සහල් පැල සම්පූර්ණයෙන් ඉදවීමට පෙර අස්වනු නෙලා පැසවීමෙන් සාදනු ලබන රළු ආහාරය හඳුන්වන්නේ:</div>
+            <div class="question-text">79. කෘෂිකාර්මික රෝද පදවන ට්‍රැක්ටරයක් පොදු මාර්ගයක (Public road) ධාවනය කිරීමේදී අනිවාර්යයෙන්ම තිබිය යුතු සුදුසුකම කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q79" onclick="check('f79', false, 'සහල් WCS')"> සහල් පිටි</label>
-                <label class="option-label"><input type="radio" name="q79" onclick="check('f79', true)"> සහල් WCS (Whole Crop Silage)</label>
-                <label class="option-label"><input type="radio" name="q79" onclick="check('f79', false, 'Whole Crop Silage')"> දුඹුරු සහල්</label>
+                <label class="option-label"><input type="radio" name="q79" onclick="check('f79', true)"> වලංගු රියදුරු බලපත්‍රය (Driving License) සන්තකයේ තිබීම</label>
+                <label class="option-label"><input type="radio" name="q79" onclick="check('f79', false, 'පාරේ යාමට බලපත්‍රය අනිවාර්ය වේ.')"> ගොවිපල හැඳුනුම්පත පමණක් තිබීම</label>
+                <label class="option-label"><input type="radio" name="q79" onclick="check('f79', false, 'වලංගු රියදුරු බලපත්‍රය')"> කිසිදු සහතිකයක් අවශ්‍ය නොවේ</label>
             </div>
             <div id="f79" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">80. සහල් WCS වල ගුණාත්මකභාවය උපරිම කිරීම සඳහා අස්වනු නෙලීම සිදුකළ යුත්තේ කුමන අවධියේදීද?</div>
+            <div class="question-text">80. ට්‍රැක්ටරයකට පිටුපසින් 'රොටවේටරය' (Rotavator / පස් කලතන උපකරණය) සවි කර ඇති විට, එහි ආරක්ෂාව වෙනුවෙන් සැමවිටම තිබිය යුතු උපාංගය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q80" onclick="check('f80', false, 'කහ ඉදුණු කාලය')"> පැළ සිටවූ වහාම</label>
-                <label class="option-label"><input type="radio" name="q80" onclick="check('f80', true)"> "කහ ඉදුණු කාලය" (Yellow ripe stage) පවතින විටදී</label>
-                <label class="option-label"><input type="radio" name="q80" onclick="check('f80', false, 'Yellow ripe stage')"> සම්පූර්ණයෙන්ම වියළී ගිය පසු</label>
+                <label class="option-label"><input type="radio" name="q80" onclick="check('f80', false, 'PTO ආරක්ෂිත ආවරණය (PTO Safety Cover) තිබිය යුතුය.')"> විශාල ලාම්පුවක්</label>
+                <label class="option-label"><input type="radio" name="q80" onclick="check('f80', true)"> ක්‍රියාකාරී PTO ආරක්ෂිත ආවරණය (PTO Safety Cover)</label>
+                <label class="option-label"><input type="radio" name="q80" onclick="check('f80', false, 'PTO ආරක්ෂිත ආවරණය')"> යකඩ දම්වැලක් පමණි</label>
             </div>
             <div id="f80" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">81. ජපානයේ වගා කරනු ලබන එළවළු වර්ග දළ වශයෙන් ප්‍රමාණයෙන් කොපමණ තිබේද?</div>
+            <div class="question-text">81. පළිබෝධනාශක දියර සාන්ද්‍රණය සකස් කිරීමේදී (මිශ්‍ර කිරීමේදී) ඇස් ආරක්ෂා කර ගැනීම සඳහා පැළඳිය යුතුම PPE උපකරණය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q81" onclick="check('f81', false, 'වර්ග 150 ක් පමණ')"> වර්ග 10 ක් පමණ</label>
-                <label class="option-label"><input type="radio" name="q81" onclick="check('f81', true)"> වර්ග 150 ක් පමණ (පෙළපොතට අනුව)</label>
-                <label class="option-label"><input type="radio" name="q81" onclick="check('f81', false, '150ක් පමණ')"> වර්ග 1000 කට වඩා</label>
+                <label class="option-label"><input type="radio" name="q81" onclick="check('f81', true)"> ආරක්ෂිත ඇස් කණ්ණාඩි (Safety Goggles)</label>
+                <label class="option-label"><input type="radio" name="q81" onclick="check('f81', false, 'Goggles මඟින් ඇස්වලට රසායනික ද්‍රව්‍ය විසිවීම වළකී.')"> සාමාන්‍ය අව් කණ්ණාඩි</label>
+                <label class="option-label"><input type="radio" name="q81" onclick="check('f81', false, 'ආරක්ෂිත ඇස් කණ්ණාඩි')"> මුහුණු ආවරණ රෙද්දක් පමණි</label>
             </div>
             <div id="f81" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">82. එළවළු වර්ගීකරණය කිරීමේදී, උද්භිද විද්‍යාත්මක (Family) ලක්ෂණ මත පදනම් වූ වර්ගීකරණය හඳුන්වන්නේ:</div>
+            <div class="question-text">82. ගොවිපලක සෝපානයක් (Lift/Elevator) හෝ ඉණිමඟක් භාවිත කර ඉහළ ස්ථානයක වැඩ කරන විට, පහළ සිටින අයගේ ආරක්ෂාව සඳහා කුමක් කළ යුතුද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q82" onclick="check('f82', false, 'ස්වභාවික වර්ගීකරණය')"> කෘතිම වර්ගීකරණය</label>
-                <label class="option-label"><input type="radio" name="q82" onclick="check('f82', true)"> ස්වභාවික වර්ගීකරණය (Natural classification)</label>
-                <label class="option-label"><input type="radio" name="q82" onclick="check('f82', false, 'Natural classification')"> අවයව වර්ගීකරණය</label>
+                <label class="option-label"><input type="radio" name="q82" onclick="check('f82', false, 'වැඩ කරන කලාපය වට කර සලකුණු තැබිය යුතුය.')"> කිසිවක් නොකර සිටීම</label>
+                <label class="option-label"><input type="radio" name="q82" onclick="check('f82', true)"> "ඇතුළුවීම තහනම්" (No Entry) පුවරු ප්‍රදර්ශනය කර වැඩ කරන ප්‍රදේශය වට කර තැබීම</label>
+                <label class="option-label"><input type="radio" name="q82" onclick="check('f82', false, 'No Entry පුවරු තැබීම')"> ශබ්ද නගා කතා කිරීම</label>
             </div>
             <div id="f82" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">83. භාවිතයට ගන්නා ශාක අවයව (මුල්, පත්‍ර, පලතුරු) අනුව කෘතිමව සිදුකරන එළවළු වර්ගීකරණය හඳුන්වන්නේ:</div>
+            <div class="question-text">83. ගබඩාවක බරැති පෙට්ටි හෝ බඩු බාහිරාදිය අතින් එසවීමේදී (Manual Lifting), කොන්දේ ආබාධ වළක්වා ගැනීමට අනුගමනය කළ යුතු නිවැරදි ඉරියව්ව කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q83" onclick="check('f83', false, 'කෘතිම වර්ගීකරණය')"> ස්වභාවික වර්ගීකරණය</label>
-                <label class="option-label"><input type="radio" name="q83" onclick="check('f83', true)"> කෘතිම වර්ගීකරණය (Artificial classification)</label>
-                <label class="option-label"><input type="radio" name="q83" onclick="check('f83', false, 'Artificial classification')"> පවුල් වර්ගීකරණය</label>
+                <label class="option-label"><input type="radio" name="q83" onclick="check('f83', true)"> කොන්ද කෙළින් තබා, දණහිස් නමා, බර ශරීරයට ලං කර කකුල්වල බලයෙන් එසවීම</label>
+                <label class="option-label"><input type="radio" name="q83" onclick="check('f83', false, 'කොන්ද නමා බර එසවීමෙන් කොන්දේ තුවාල ඇති වේ.')"> කොන්ද පමණක් නමා, කකුල් කෙළින් තබා බර එසවීම</label>
+                <label class="option-label"><input type="radio" name="q83" onclick="check('f83', false, 'පළමුවැන්න නිවැරදියි')"> එක අතකින් පමණක් වේගයෙන් ඇදීම</label>
             </div>
             <div id="f83" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">84. පිපිඤ්ඤා, පැණි පුහුල් සහ කොමඩු යන එළවළු අයත් වන්නේ කුමන ශාක කුලයට/පවුලටද?</div>
+            <div class="question-text">84. පළිබෝධනාශක ඉසින යන්ත්‍රයක (Sprayer) නලයක් හෝ නොසලයක් (Nozzle) හදිසියේ hිර වුවහොත්, එය පිරිසිදු කිරීමට කිසිවිටෙකත් නොකළ යුත්තේ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q84" onclick="check('f84', false, 'කැකිරි පවුල')"> බටු පවුල</label>
-                <label class="option-label"><input type="radio" name="q84" onclick="check('f84', true)"> කැකිරි පවුල (Cucurbitaceae)</label>
-                <label class="option-label"><input type="radio" name="q84" onclick="check('f84', false, 'Cucurbitaceae')"> ලිලි පවුල</label>
+                <label class="option-label"><input type="radio" name="q84" onclick="check('f84', false, 'කටින් පිඹීම සපුරා තහනම්ය (විෂ ශරීරගත වේ).')"> බුරුසුවකින් පිරිසිදු කිරීම</label>
+                <label class="option-label"><input type="radio" name="q84" onclick="check('f84', true)"> නොසලය කටට තබා හුස්මෙන්/කටින් පිඹීම</label>
+                <label class="option-label"><input type="radio" name="q84" onclick="check('f84', false, 'කටින් පිඹීම සපුරා තහනම්')"> ජලයෙන් සෝදා හැරීම</label>
             </div>
             <div id="f84" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">85. තක්කාලි, වම්බටු සහ අර්තාපල් යන භෝග අයත් වන උද්භිද විද්‍යාත්මක පවුල කුමක්ද?</div>
+            <div class="question-text">85. කෘෂිකාර්මික යන්ත්‍රවල ඇති 'භ්‍රමණය වන කොටස්' (Rotating parts - උදා: බෙල්ට්, ගියර්) මඟින් සිදුවන අනතුරු වැළැක්වීමට යන්ත්‍ර නිෂ්පාදකයා විසින් සවි කර ඇත්තේ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q85" onclick="check('f85', false, 'බටු පවුල')"> කැකිරි පවුල</label>
-                <label class="option-label"><input type="radio" name="q85" onclick="check('f85', true)"> බටු පවුල (Solanaceae / Nasturtiidae)</label>
-                <label class="option-label"><input type="radio" name="q85" onclick="check('f85', false, 'Solanaceae')"> කුරුස යුද පවුල (Cruciferous)</label>
+                <label class="option-label"><input type="radio" name="q85" onclick="check('f85', true)"> ආරක්ෂිත ආවරණ / කීපර් (Safety Guards / Safety Covers)</label>
+                <label class="option-label"><input type="radio" name="q85" onclick="check('f85', false, 'Safety Guards කිසිවිටෙකත් ගලවා යන්ත්‍ර ක්‍රියාත්මක නොකළ යුතුය.')"> ස්වයංක්‍රීය ලාම්පු</label>
+                <label class="option-label"><input type="radio" name="q85" onclick="check('f85', false, 'ආරක්ෂිත ආවරණ')"> වේග පාලක ලීවර පමණි</label>
             </div>
             <div id="f85" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">86. ගෝවා, රාබු සහ චීන ගෝවා යන එළවළු අයත් වන්නේ කුමන ශාක පවුලටද?</div>
+            <div class="question-text">86. හරිතාගාර (Greenhouse) ඇතුළත වගා කටයුතු සිදු කරන විට, එළිමහනට වඩා සේවකයාට දැනෙන ප්‍රධානතම පාරිසරික වෙනස කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q86" onclick="check('f86', true)"> Cruciferous පවුල (Cruciferae / අබ කුලය)</label>
-                <label class="option-label"><input type="radio" name="q86" onclick="check('f86', false, 'Cruciferous')"> ඇස්ටරේසි පවුල</label>
-                <label class="option-label"><input type="radio" name="q86" onclick="check('f86', false, 'අබ කුලය')"> ලිලි පවුල</label>
+                <label class="option-label"><input type="radio" name="q86" onclick="check('f86', false, 'හරිතාගාර තුළ උෂ්ණත්වය සහ ආර්ද්‍රතාවය ඉතා ඉහළ අගයක පවතී.')"> අධික සීතලක් දැනීම</label>
+                <label class="option-label"><input type="radio" name="q86" onclick="check('f86', true)"> පිටතට වඩා වැඩි උෂ්ණත්වයක් (Heat) සහ ඉහළ ආර්ද්‍රතාවයක් (Humidity / හුස්ම හිරවන ගතියක්) පැවතීම</label>
+                <label class="option-label"><input type="radio" name="q86" onclick="check('f86', false, 'දෙවැන්න නිවැරදියි')"> අධික සුළඟක් පැවතීම</label>
             </div>
             <div id="f86" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">87. ලූණු, සුදු ලූණු සහ ලීක්ස් වැනි භෝග අයත් වන එළවළු පවුල කුමක්ද?</div>
+            <div class="question-text">87. ගොවිපලක ට්‍රැක්ටරයක් හෝ විශාල යන්ත්‍රයක් පසුපසට ධාවනය කිරීමේදී (Reversing), අනතුරු වළක්වා ගැනීමට අනිවාර්යයෙන්ම කළ යුත්තේ කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q87" onclick="check('f87', false, 'ලිලි පවුල')"> බටු පවුල</label>
-                <label class="option-label"><input type="radio" name="q87" onclick="check('f87', true)"> ලිලි පවුල (Liliaceae)</label>
-                <label class="option-label"><input type="radio" name="q87" onclick="check('f87', false, 'Liliaceae')"> කැරට් පවුල</label>
+                <label class="option-label"><input type="radio" name="q87" onclick="check('f87', true)"> පසුපස පැහැදිලිව පෙනෙන දර්පණ (Mirrors) බැලීම, ශබ්ද සංඥා නිකුත් කිරීම සහ සහායකයෙකුගේ සහය ලැබීම</label>
+                <label class="option-label"><input type="radio" name="q87" onclick="check('f87', false, 'පසුපස බැලීම සහ සංඥා කිරීම අනිවාර්ය වේ.')"> කිසිවක් නොබලා වේගයෙන් පසුපසට ධාවනය</label>
+                <label class="option-label"><input type="radio" name="q87" onclick="check('f87', false, 'පළමුවැන්න නිවැරදියි')"> ඉදිරිපස පමණක් බලා සිටීම</label>
             </div>
             <div id="f87" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">88. පස සම්පූර්ණයෙන්ම භාවිත නොකර, ජලයේ දිය කර ඇති පෝෂක ද්‍රාවණයක් පමණක් භාවිතයෙන් භෝග වගා කිරීමේ ක්‍රමය කුමක්ද?</div>
+            <div class="question-text">88. පළිබෝධනාශක හෝ රසායනික ද්‍රව්‍ය ශරීරගත වීමෙන් කෙනෙකු සිහිසුන් වුවහොත් හෝ දැඩි අපහසුතාවයට පත් වුවහොත්, වහාම ගත යුතු පියවර කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q88" onclick="check('f88', false, 'పాංශු රහිත වගාව')"> විවෘත ක්ෂේත්‍ර වගාව</label>
-                <label class="option-label"><input type="radio" name="q88" onclick="check('f88', true)"> පාංශු රහිත වගාව (Soilless culture / Hydroponics)</label>
-                <label class="option-label"><input type="radio" name="q88" onclick="check('f88', false, 'Hydroponics')"> වැටි වගාව</label>
+                <label class="option-label"><input type="radio" name="q88" onclick="check('f88', false, 'වහාම රෝහල් ගත කර වෛද්‍ය ප්‍රතිකාර දිය යුතුය.')"> ඔහුට නිදා ගැනීමට ඉඩ හැරීම</label>
+                <label class="option-label"><input type="radio" name="q88" onclick="check('f88', true)"> වහාම හදිසි වෛද්‍ය සේවා අමතා (ඇම්බියුලන්ස්) රෝහල්ගත කිරීම සහ අදාළ රසායනික ලේබලය වෛද්‍යවරයාට පෙන්වීම</label>
+                <label class="option-label"><input type="radio" name="q88" onclick="check('f88', false, 'වෛද්‍ය ප්‍රතිකාර ලබා දීම')"> සාමාන්‍ය ජලය පමණක් පෙවීම</label>
             </div>
             <div id="f88" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">89. පාංශු රහිත වගාවේදී ඝන මාධ්‍ය (Solid substrates) ලෙස භාවිත කළ හැකි ද්‍රව්‍ය මොනවාද?</div>
+            <div class="question-text">89. ගොවිපල ගබඩාවක ඇති මෙවලම් සහ රසායනික ද්‍රව්‍ය භාවිතයෙන් පසු නැවත තැබීමේදී අනුගමනය කළ යුතු හොඳම පුරුද්ද කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q89" onclick="check('f89', false, 'පාෂාණ ලොම්, පීට් මෝස් ආදිය')"> මැටි සහ රතු පස</label>
-                <label class="option-label"><input type="radio" name="q89" onclick="check('f89', true)"> පාෂාණ ලොම් (Rock wool), පීට් මෝස්, පොල් ලෙලි සහ බොරළු</label>
-                <label class="option-label"><input type="radio" name="q89" onclick="check('f89', false, 'Rock wool / Peat moss')"> ප්ලාස්ටික් කැබලි</label>
+                <label class="option-label"><input type="radio" name="q89" onclick="check('f89', true)"> මුලින් තිබූ නියමිත ආරක්ෂිත ස්ථානයේම (Designated place) පිරිසිදු කර නැවත තැන්පත් කිරීම</label>
+                <label class="option-label"><input type="radio" name="q89" onclick="check('f89', false, 'නියමිත ස්ථානයේ තැබීම 5S වලටද අදාළ වේ.')"> ඕනෑම තැනක දමා යාම</label>
+                <label class="option-label"><input type="radio" name="q89" onclick="check('f89', false, 'නියමිත ස්ථානයේ තැබීම')"> ඊළඟ දවසේ පාවිච්චි කරන නිසා කුඹුරේ තැබීම</label>
             </div>
             <div id="f89" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">90. පාංශු රෝග වලට ඔරොත්තු දෙන මූලික ශාකයකට (Rootstock) ඉහළ අස්වැන්නක් දෙන අංකුරයක් (Scion) සවි කර නිපදවන පැළ වර්ගය කුමක්ද?</div>
+            <div class="question-text">90. පැළ සිටුවීම සඳහා පසෙහි කාබනික ද්‍රව්‍ය (Organic matter) වැඩි දියුණු කිරීමට සහ පස සාරවත් කිරීමට යොදන ස්වභාවික ද්‍රව්‍යය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q90" onclick="check('f90', false, 'බද්ධ කරන ලද බීජ පැළ')"> සාමාන්‍ය බීජ පැළ</label>
-                <label class="option-label"><input type="radio" name="q90" onclick="check('f90', true)"> බද්ධ කරන ලද බීජ පැළ (Grafted seedlings)</label>
-                <label class="option-label"><input type="radio" name="q90" onclick="check('f90', false, 'Grafted seedlings')"> පටක රෝපණ පැළ</label>
+                <label class="option-label"><input type="radio" name="q90" onclick="check('f90', false, 'කොම්පෝස්ට් යනු කාබනික පොහොරකි.')"> යූරියා</label>
+                <label class="option-label"><input type="radio" name="q90" onclick="check('f90', true)"> කොම්පෝස්ට් පොහොර (Compost)</label>
+                <label class="option-label"><input type="radio" name="q90" onclick="check('f90', false, 'කොම්පෝස්ට්')"> රොක් පොස්පේට්</label>
             </div>
             <div id="f90" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">91. බද්ධ කරන ලද බීජ පැළ (Grafted seedlings) ජපානයේ බහුලවම භාවිත කරනු ලබන එළවළු භෝග මොනවාද?</div>
+            <div class="question-text">91. ජපානයේ වී වගාවේදී (Rice cultivation), බීජ කෙලින්ම කුඹුරේ වැපිරීම වෙනුවට නවීන තාක්ෂණිකව බහුලවම සිදු කරන්නේ කුමන ක්‍රමවේදයද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q91" onclick="check('f91', false, 'වම්බටු, පිපිඤ්ඤා, තක්කාලි')"> රාබු සහ කැරට්</label>
-                <label class="option-label"><input type="radio" name="q91" onclick="check('f91', true)"> වම්බටු, පිපිඤ්ඤා සහ තක්කාලි (Solanaceae & Cucurbitaceae)</label>
-                <label class="option-label"><input type="radio" name="q91" onclick="check('f91', false, 'වම්බටු සහ තක්කාලි වර්ග')"> ලූණු සහ නිවිති</label>
+                <label class="option-label"><input type="radio" name="q91" onclick="check('f91', false, 'යාන්ත්‍රිකව පැළ සිටුවීම (Transplanting) සිදු කරයි.')"> අතින් බීජ ඉසීම පමණක්</label>
+                <label class="option-label"><input type="radio" name="q91" onclick="check('f91', true)"> තවාන් තැටිවල පැළ වර්ධනය කර, පැළ සිටුවන යන්ත්‍ර (Rice transplanter) මඟින් කුඹුරේ සිටුවීම</label>
+                <label class="option-label"><input type="radio" name="q91" onclick="check('f91', false, 'යාන්ත්‍රිකව පැළ සිටුවීම')"> වල් වී වගා කිරීම</label>
             </div>
             <div id="f91" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">92. කෘෂිකර්මාන්තයේදී "හොඳ බීජ පැළයක්" (Good seedling) ලෙස තීරණය කරනු ලබන බාහිර ලක්ෂණ මොනවාද?</div>
+            <div class="question-text">92. වී අස්වනු නෙළීමේදී ගොයම් කැපීම, ඇට වෙන් කිරීම (Threshing) සහ පිරිසිදු කිරීම යන කාර්යයන් තුනම එකවර සිදු කරන මහා පරිමාණ කෘෂිකාර්මික යන්ත්‍රය කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q92" onclick="check('f92', false, 'ඝන ශක්තිමත් කඳන් සහ නිරෝගී පත්‍ර')"> සිහින් දිග කඳක් සහ සුදුමැලි පත්‍ර පැවතීම</label>
-                <label class="option-label"><input type="radio" name="q92" onclick="check('f92', true)"> ඝන අන්තරාල, ඝන ශක්තිමත් කඳන් සහ නිරෝගී පත්‍ර පැවතීම</label>
-                <label class="option-label"><input type="radio" name="q92" onclick="check('f92', false, 'ඝන ශක්තිමත් පැළ')"> මුල් නොමැති වීම</label>
+                <label class="option-label"><input type="radio" name="q92" onclick="check('f92', true)"> කොම්බයින් හාවෙස්ටර් යන්ත්‍රය (Combine Harvester / බූතයා යන්ත්‍රය)</label>
+                <label class="option-label"><input type="radio" name="q92" onclick="check('f92', false, 'Combine Harvester එකවර වැඩ කිහිපයක් කරයි.')"> ට්‍රැක්ටරය</label>
+                <label class="option-label"><input type="radio" name="q92" onclick="check('f92', false, 'කොම්බයින් හාවෙස්ටර්')"> වී වේලන යන්ත්‍රය</label>
             </div>
             <div id="f92" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">93. වසර පුරා කොළ පැහැයෙන් පවතින, මැන්ඩරින් දොඩම් (Mandarins) වැනි ශාක අයත් වන පළතුරු ගස් කාණ්ඩය කුමක්ද?</div>
+            <div class="question-text">93. නෙළාගත් අස්වැන්න (එළවළු/පළතුරු) දීර්ඝ කාලයක් නරක් නොවී තබා ගැනීම සඳහා ගබඩා කාමරය තුළ පාලනය කළ යුතු ප්‍රධාන සාධක දෙක කුමක්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q93" onclick="check('f93', false, 'සදාහරිත පලතුරු ගස්')"> පතනශීලී පලතුරු ගස්</label>
-                <label class="option-label"><input type="radio" name="q93" onclick="check('f93', true)"> සදාහරිත පලතුරු ගස් (Evergreen fruit trees)</label>
-                <label class="option-label"><input type="radio" name="q93" onclick="check('f93', false, 'Evergreen trees')"> මූල පලතුරු ගස්</label>
+                <label class="option-label"><input type="radio" name="q93" onclick="check('f93', false, 'උෂ්ණත්වය සහ ආර්ද්‍රතාවය පාලනය කළ යුතුය.')"> ආලෝකය සහ ශබ්දය</label>
+                <label class="option-label"><input type="radio" name="q93" onclick="check('f93', true)"> උෂ්ණත්වය (Temperature) සහ ආර්ද්‍රතාවය (Humidity)</label>
+                <label class="option-label"><input type="radio" name="q93" onclick="check('f93', false, 'උෂ්ණත්වය සහ ආර්ද්‍රතාවය')"> පසෙහි සාරවත් බව</label>
             </div>
             <div id="f93" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">94. ශීත ඍතුවේදී පත්‍ර හැලෙන, ඇපල්, මිදි සහ පෙයාර්ස් වැනි පළතුරු ගස් අයත් වන්නේ කුමන කාණ්ඩයටද?</div>
+            <div class="question-text">94. ගොවිපලක සේවය කරන විට 'ආරක්ෂාව ප්‍රථමයෙන්' (Safety First) යන රීතියට අනුව, වැඩක් ආරම්භ කිරීමට පෙර සේවකයින් එකතු වී කරන කෙටි සාකච්ඡාව සහ ආරක්ෂක සටන් පාඨ කීම hඳුන්වන්නේ?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q94" onclick="check('f94', false, 'පතනශීලී පලතුරු ගස්')"> සදාහරිත පලතුරු ගස්</label>
-                <label class="option-label"><input type="radio" name="q94" onclick="check('f94', true)"> පතනශීලී පලතුරු ගස් (Deciduous fruit trees)</label>
-                <label class="option-label"><input type="radio" name="q94" onclick="check('f94', false, 'Deciduous fruit trees')"> නිවර්තන පලතුරු ගස්</label>
+                <label class="option-label"><input type="radio" name="q94" onclick="check('f94', true)"> මෙවලම් පෙට්ටි රැස්වීම / වැඩට පෙර රැස්වීම (Toolbox Meeting / TBM)</label>
+                <label class="option-label"><input type="radio" name="q94" onclick="check('f94', false, 'TBM රැස්වීම් මඟින් ආරක්ෂාව තහවුරු වේ.')"> දිවා ආහාර විවේකය</label>
+                <label class="option-label"><input type="radio" name="q94" onclick="check('f94', false, 'Toolbox Meeting')"> වාර්ෂික මහා සභාව</label>
             </div>
             <div id="f94" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">95. මිදි වගාවේදී බීජ රහිත (Seedless grapes) මිදි නිෂ්පාදනය කිරීම සඳහා බහුලව භාවිත කරන කෘෂිකාර්මික ද්‍රව්‍ය වර්ගය කුමක්ද?</div>
+            <div class="question-text">95. වී වගාවකදී කරල් hටගන්නා අවධියේදී (Heading stage), සහල් ඇට සාරවත් වීම සඳහා අවසාන වරට යොදනු ලබන මතුපිට පොහොර (Top-dressing) සිංහලෙන් hඳුන්වන්නේ?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q95" onclick="check('f95', false, 'ශාක වර්ධන නියාමකයන්')"> වල් නාශක</label>
-                <label class="option-label"><input type="radio" name="q95" onclick="check('f95', true)"> ශාක වර්ධන නියාමකයන් (Plant Growth Regulators / Gibberellin)</label>
-                <label class="option-label"><input type="radio" name="q95" onclick="check('f95', false, 'Plant Growth Regulators')"> කෘමිනාශක</label>
+                <label class="option-label"><input type="radio" name="q95" onclick="check('f95', false, 'කරල් පොහොර (Ear-heading fertilizer) ලෙස හඳුන්වයි.')"> මූලික පොහොර</label>
+                <label class="option-label"><input type="radio" name="q95" onclick="check('f95', true)"> කරල් පොහොර (Ear-heading fertilizer / හොදන් පොහොර)</label>
+                <label class="option-label"><input type="radio" name="q95" onclick="check('f95', false, 'කරල් පොහොර')"> කාබනික පොහොර</label>
             </div>
             <div id="f95" class="feedback"></div>
         </div>
 
         <div class="question-card">
-            <div class="question-text">96. අස්වැන්න නෙළන කාලය තුළ පළතුරු ගස් යට බිමෙහි "පරාවර්තක තහඩු වසුන්" (Reflective sheets) ඇතිරීමේ ප්‍රධාන අරමුණ කුමක්ද?</div>
+            <div class="question-text">96. කුඹුරේ හෝ වගා බිමෙහි පසට යටින් මැටි පයිප්ප හෝ සිදුරු සහිත බට වළලා සිදුකරන භූගත ජල අපවහන ක්‍රමය (Underground drainage) hඳුන්වන්නේ කුමන නමකින්ද?</div>
             <div class="options">
-                <label class="option-label"><input type="radio" name="q96" onclick="check('f96', false, 'හිරු කිරණ පරාවර්තනය කිරීම')"> වල් පැළෑටි වැවීම</label>
-                <label class="option-label"><input type="radio" name="q96" onclick="check('f96', true)"> හිරු කිරණ පරාවර්තනය කර පළතුරු වල වර්ණය හා පැණිරස (සීනි ප්‍රමාණය) වැඩි දියුණු කිරීම</label>
-                <label class="option-label"><input type="radio" name="q96" onclick="check('f96', false, 'වර්ණය සහ පැණිරස වැඩි කිරීම')"> පස සිසිල් කිරීම</label>
+                <label class="option-label"><input type="radio" name="q96" onclick="check('f96', false, 'අඳුරු ජලාපවහනය')"> විවෘත ජලාපවහනය</label>
+                <label class="option-label"><input type="radio" name="q96" onclick="check('f96', true)"> අඳුරු ජලාපවහනය (Subsurface drainage / ඇන්ක්යූ ජලාපවහනය)</label>
+                <label class="option-label"><input type="radio" name="q96" onclick="check('f96', false, 'Subsurface drainage')"> මතුපිට ජල සැපයුම</label>
             </div>
             <div id="f96" class="feedback"></div>
-        </div>
-
-        <div class="question-card">
-            <div class="question-text">97. පළතුරු වගාවේදී පළිබෝධ පාලනය සඳහා රසායනික ද්‍රව්‍ය විශාල ලෙස ක්ෂේත්‍රය පුරා ඉසීමට භාවිත කරන විශේෂිත වාහනය/යන්ත්‍රය කුමක්ද?</div>
-            <div class="options">
-                <label class="option-label"><input type="radio" name="q97" onclick="check('f97', false, 'ස්පීඩ් ස්ප්‍රේයර්')"> මොනෝරේල්</label>
-                <label class="option-label"><input type="radio" name="q97" onclick="check('f97', true)"> ස්පීඩ් ස්ප්‍රේයර් (Speed Sprayer - SS වාහනය)</label>
-                <label class="option-label"><input type="radio" name="q97" onclick="check('f97', false, 'Speed Sprayer')"> ට්‍රැක්ටරය</label>
-            </div>
-            <div id="f97" class="feedback"></div>
-        </div>
-
-        <div class="question-card">
-            <div class="question-text">98. පළතුරු ගස්වල උස් ස්ථානවල කප්පාදු කිරීම් සහ අස්වනු නෙලීම් ආරක්ෂිතව කිරීමට භාවිත කරන අත්‍යවශ්‍ය කෘෂි මෙවලම කුමක්ද?</div>
-            <div class="options">
-                <label class="option-label"><input type="radio" name="q98" onclick="check('f98', false, 'අඩි ඉණිමඟ')"> කප්පාදු කතුර</label>
-                <label class="option-label"><input type="radio" name="q98" onclick="check('f98', true)"> පියගැට පෙළ / අඩි ඉණිමඟ (A-frame Ladder / කිතට්සු)</label>
-                <label class="option-label"><input type="radio" name="q98" onclick="check('f98', false, 'A-frame Ladder')"> රොටරිය</label>
-            </div>
-            <div id="f98" class="feedback"></div>
-        </div>
-
-        <div class="question-card">
-            <div class="question-text">99. පලතුරු අස්වැන්න නෙලීමෙන් පසු, ශාකයේ පෝෂක සංචිත වැඩි කිරීම සඳහා සරත් ඍතුව අවසානයේ යොදනු ලබන පොහොර විශේෂය හඳුන්වන්නේ:</div>
-            <div class="options">
-                <label class="option-label"><input type="radio" name="q99" onclick="check('f99', false, 'සරත් ඍතු පොහොර')"> මූල පොහොර</label>
-                <label class="option-label"><input type="radio" name="q99" onclick="check('f99', true)"> සරත් ඍතු පොහොර / ස්තූති පොහොර (Thank-you fertilizer / අකිගොඒ)</label>
-                <label class="option-label"><input type="radio" name="q99" onclick="check('f99', false, 'Thank-you fertilizer')"> කරල් පොහොර</label>
-            </div>
-            <div id="f99" class="feedback"></div>
-        </div>
-
-        <div class="question-card">
-            <div class="question-text">100. කුඹුරේ හෝ වගා බිමෙහි පසට යටින් මැටි පයිප්ප හෝ සිදුරු සහිත බට වළලා සිදුකරන භූගත ජල අපවහන ක්‍රමය (Underground drainage) හඳුන්වන්නේ කුමන නමකින්ද?</div>
-            <div class="options">
-                <label class="option-label"><input type="radio" name="q100" onclick="check('f100', false, 'අඳුරු ජලාපවහනය')"> විවෘත ජලාපවහනය</label>
-                <label class="option-label"><input type="radio" name="q100" onclick="check('f100', true)"> අඳුරු ජලාපවහනය (Subsurface drainage / ඇන්ක්යූ ජලාපවහනය)</label>
-                <label class="option-label"><input type="radio" name="q100" onclick="check('f100', false, 'Subsurface drainage')"> මතුපිට ජල සැපයුම</label>
-            </div>
-            <div id="f100" class="feedback"></div>
         </div>
 
     </div>
@@ -1121,14 +1069,14 @@ function check(id, isCorrect, solutionText) {
     var fb = document.getElementById(id);
     if (!fb) return;
     
-    fb.style.display = 'block';
+    fb.style.display = "block";
     
     if (isCorrect) {
-        fb.className = 'feedback correct';
-        fb.innerHTML = '⭕ නිවැරදියි!';
+        fb.className = "feedback correct";
+        fb.innerHTML = "✅ නිවැරදියි! සාර්ථකයි.";
     } else {
-        fb.className = 'feedback incorrect';
-        fb.innerHTML = '❌ වැරදියි! <div class="explain">නිවැරදි පිළිතුර: ' + (solutionText ? solutionText : 'විකල්පයන් බලන්න') + '</div>';
+        fb.className = "feedback incorrect";
+        fb.innerHTML = "❌ වැරදියි! නිවැරදි පිළිතුර: " + (solutionText ? solutionText : "වෙනත් පිළිතුරකි.");
     }
 }
 </script>
